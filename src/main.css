@@ -1,0 +1,29 @@
+/* 
+
+PAGE COLORS:
+
+#95D5B2
+#52B788
+#40916C
+#74C69D
+#2D6A4F
+
+
+FONT-COLORS:
+
+#333533
+
+
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 62.5%;
+  color: #333533;
+}
