@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="header-logo">Logo</div>
+    <div class="header-logo"></div>
     <nav class="nav">
       <ul class="nav-list">
         <li class="nav-list-item">Home</li>
@@ -25,6 +25,7 @@ header {
   font-size: 3.2rem;
   font-weight: 500;
   padding: 1.2rem 2.4rem;
+  color: #333533;
 }
 
 .nav-list {
