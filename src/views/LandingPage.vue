@@ -2,7 +2,7 @@
   <section class="home-section">
     <Transition name="title">
       <div class="landing-page-container">
-        <div class="rectangle" v-if="showTitle"></div>
+        <div class="rectangle" v-if="show"></div>
         <h1>JUOZAS PETRYLA</h1>
         <h2>WEB DEVELOPER</h2>
       </div>
@@ -15,8 +15,8 @@
 import useAnimation from '../mixins/animation'
 export default {
   setup() {
-    const showTitle = useAnimation()
-    return { showTitle }
+    const show = useAnimation()
+    return { show }
   }
 }
 </script>
