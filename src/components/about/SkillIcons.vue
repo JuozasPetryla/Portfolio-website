@@ -1,8 +1,10 @@
 <template>
   <div class="skill-icon-container" v-on:mouseenter="showTooltip" v-on:mouseleave="hideTooltip">
-    <base-tooltip :style="tooltipOpacity">
-      <slot name="logo"></slot>
-    </base-tooltip>
+    <transition name="fade">
+      <base-tooltip v-if="tooltipVisible">
+        <slot name="logo"></slot>
+      </base-tooltip>
+    </transition>
     <slot></slot>
   </div>
 </template>
@@ -29,6 +31,7 @@ export default {
     })
 
     return {
+      tooltipVisible,
       tooltipOpacity,
       hideTooltip,
       showTooltip
@@ -44,15 +47,21 @@ export default {
   justify-content: center;
 }
 
-.fade-enter-from {
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
 }
 
 .fade-enter-active {
-  transition: opacity 0.3s ease;
+  transition: all 0.6s ease;
 }
 
-.fade-enter-to {
+.fade-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.fade-enter-to,
+.fade-leave-from {
   opacity: 1;
 }
 </style>
