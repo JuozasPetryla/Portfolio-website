@@ -2,8 +2,9 @@
   <div class="skills-section">
     <h3>My skills</h3>
     <div class="skill-container">
-      <div class="skill-icon-container">
-        <base-tooltip>HTML</base-tooltip>
+      <skill-icons>
+        <template #logo><p>HTML</p></template>
+
         <svg
           fill="none"
           height="2500"
@@ -11,6 +12,8 @@
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 124 141.53199999999998"
           class="skill-icon"
+          v-on:mouseenter="showTooltip"
+          v-on:mouseleave="hideTooltip"
         >
           <path d="M10.383 126.894L0 0l124 .255-10.979 126.639-50.553 14.638z" fill="#e34f26" />
           <path d="M62.468 129.277V12.085l51.064.17-9.106 104.851z" fill="#ef652a" />
@@ -19,9 +22,10 @@
             fill="#fff"
           />
         </svg>
-      </div>
-      <div class="skill-icon-container">
-        <base-tooltip>CSS</base-tooltip>
+      </skill-icons>
+      <skill-icons>
+        <template #logo><p>CSS</p></template>
+
         <svg
           fill="none"
           height="2500"
@@ -29,6 +33,8 @@
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 124 141.53"
           class="skill-icon"
+          v-on:mouseenter="showTooltip"
+          v-on:mouseleave="hideTooltip"
         >
           <path d="M10.383 126.892L0 0l124 .255-10.979 126.637-50.553 14.638z" fill="#1b73ba" />
           <path d="M62.468 129.275V12.085l51.064.17-9.106 104.85z" fill="#1c88c7" />
@@ -37,9 +43,10 @@
             fill="#fff"
           />
         </svg>
-      </div>
-      <div class="skill-icon-container">
-        <base-tooltip>JavaScript</base-tooltip>
+      </skill-icons>
+      <skill-icons>
+        <template #logo><p>JavaScript</p></template>
+
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="2500"
@@ -53,9 +60,9 @@
             fill="#323330"
           />
         </svg>
-      </div>
-      <div class="skill-icon-container">
-        <base-tooltip>Vue</base-tooltip>
+      </skill-icons>
+      <skill-icons>
+        <template #logo><p>Vue</p></template>
         <svg
           width="2500"
           height="2158"
@@ -68,9 +75,9 @@
           <path d="M0 0l128 220.8L256 0h-51.2L128 132.48 50.56 0H0z" fill="#41B883" />
           <path d="M50.56 0L128 133.12 204.8 0h-47.36L128 51.2 97.92 0H50.56z" fill="#35495E" />
         </svg>
-      </div>
-      <div class="skill-icon-container">
-        <base-tooltip>Git</base-tooltip>
+      </skill-icons>
+      <skill-icons>
+        <template #logo><p>Git</p></template>
         <svg
           width="2500"
           height="2500"
@@ -84,32 +91,16 @@
             fill="#DE4C36"
           />
         </svg>
-      </div>
+      </skill-icons>
     </div>
   </div>
 </template>
 
 <script>
-import { ref } from 'vue'
-import BaseTooltip from '../UI/BaseTooltip.vue'
+import SkillIcons from './SkillIcons.vue'
 export default {
-  components: { BaseTooltip },
-
-  setup() {
-    const tooltipVisible = ref(false)
-
-    function showTooltip() {
-      tooltipVisible.value = true
-    }
-    function hideTooltip() {
-      tooltipVisible.value = false
-    }
-
-    return {
-      tooltipVisible,
-      hideTooltip,
-      showTooltip
-    }
+  components: {
+    SkillIcons
   }
 }
 </script>
@@ -140,15 +131,8 @@ export default {
   align-items: center;
   padding: 0 1.2rem;
 }
-
 .skill-icon {
   width: 10.4em;
   height: 10.4em;
-}
-
-.skill-icon-container {
-  display: flex;
-  position: relative;
-  justify-content: center;
 }
 </style>
