@@ -43,7 +43,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .about-section {
   height: 100%;
   width: 100%;
@@ -53,6 +53,7 @@ export default {
   justify-content: center;
   grid-template-rows: 2fr 1fr 2fr;
   gap: 9.6rem;
+  overflow: hidden;
 }
 
 .about-header {

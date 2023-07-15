@@ -47,7 +47,7 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 0.4rem;
+  height: 0.3rem;
   background: #333533;
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;

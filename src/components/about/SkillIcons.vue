@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import BaseTooltip from '../UI/BaseTooltip.vue'
 
 export default {
@@ -26,13 +26,8 @@ export default {
       tooltipVisible.value = false
     }
 
-    const tooltipOpacity = computed(function () {
-      return { opacity: tooltipVisible.value ? '1' : '0' }
-    })
-
     return {
       tooltipVisible,
-      tooltipOpacity,
       hideTooltip,
       showTooltip
     }
@@ -49,6 +44,7 @@ export default {
 
 .fade-enter-from,
 .fade-leave-to {
+  transform: translateY(20%);
   opacity: 0;
 }
 
@@ -62,6 +58,7 @@ export default {
 
 .fade-enter-to,
 .fade-leave-from {
+  transform: translateY(0);
   opacity: 1;
 }
 </style>

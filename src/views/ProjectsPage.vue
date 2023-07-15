@@ -1,13 +1,9 @@
 <template>
-  <section class="home-section">
-    <Transition name="title">
-      <div class="landing-page-container">
-        <div class="rectangle" v-if="show"></div>
-        <h1>JUOZAS PETRYLA</h1>
-        <h2>WEB DEVELOPER</h2>
-      </div>
-    </Transition>
-    <base-button class="btn">CONTACT ME</base-button>
+  <section class="projects-section">
+    <div class="projects-title-container">
+      <div class="rectangle" v-if="show"></div>
+      <h2>Projects</h2>
+    </div>
   </section>
 </template>
 
@@ -22,22 +18,20 @@ export default {
 </script>
 
 <style scoped>
-.home-section {
-  background: #333533;
-  height: 100vh;
+.projects-section {
+  height: 100%;
   width: 100%;
+  background: #333533;
   display: grid;
-  justify-content: center;
   justify-items: center;
-  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  grid-template-rows: 1fr 2fr 2fr;
   gap: 9.6rem;
+  overflow: hidden;
 }
-
-.landing-page-container {
-  margin-top: 20rem;
-  line-height: 1.1;
+.projects-title-container {
+  margin-top: 2.4rem;
   position: relative;
-  padding: 1.2rem;
 }
 
 .rectangle {
@@ -45,7 +39,8 @@ export default {
   position: absolute;
   left: -1%;
   width: 100%;
-  height: 20rem;
+  top: 10%;
+  height: 16rem;
   border-left: 10px solid #40916c;
   animation: moveRect 1s 1 cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
 }
@@ -61,16 +56,11 @@ export default {
   }
 }
 
-.landing-page-container h1 {
+.projects-title-container h2 {
   font-size: 12.6rem;
   color: #dee2e6;
   letter-spacing: 3px;
   text-shadow: 5px 5px #52b788;
-}
-
-.landing-page-container h2 {
-  font-size: 4.8rem;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-  color: #dee2e6;
+  padding-right: 1.2rem;
 }
 </style>

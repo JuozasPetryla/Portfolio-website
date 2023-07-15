@@ -93,6 +93,7 @@
         </svg>
       </skill-icons>
     </div>
+    <base-button class="cv-button">Download CV</base-button>
   </div>
 </template>
 
@@ -108,7 +109,7 @@ export default {
 <style scoped>
 .skills-section {
   display: grid;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: 1fr 2fr 1fr;
   justify-items: center;
 }
 
@@ -134,5 +135,8 @@ export default {
 .skill-icon {
   width: 10.4em;
   height: 10.4em;
+}
+.cv-button {
+  margin-bottom: 9.6rem;
 }
 </style>
