@@ -12,7 +12,7 @@ export default {}
 .btn {
   width: 25.5rem;
   height: 7rem;
-  padding: 1rem 1.2rem 0.4rem 1.2rem;
+  padding: 1rem 1rem 0.4rem 1rem;
   font-size: 3.2rem;
   background: inherit;
   font-weight: 600;
@@ -40,7 +40,7 @@ export default {}
   top: 0;
   left: 0;
   right: 0;
-  bottom: -1%;
+  bottom: -2%;
   background: #40916c;
   z-index: -1;
   transition: transform 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);

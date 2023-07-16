@@ -30,3 +30,8 @@ html {
   font-size: 62.5%;
   color: #dee2e6;
 }
+
+a {
+  text-decoration: none;
+  color: #dee2e6;
+}

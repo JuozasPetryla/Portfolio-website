@@ -64,6 +64,10 @@
           />
         </svg>
       </template>
+      <template #button-1><a href="https://powertower.netlify.app/">Visit site</a></template>
+      <template #button-2
+        ><a href="https://github.com/JuozasPetryla/landing-page">Project GitHub</a></template
+      >
     </base-card>
   </section>
 </template>
