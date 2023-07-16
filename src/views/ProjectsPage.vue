@@ -80,7 +80,7 @@ export default {
 
 <style scoped>
 .projects-section {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background: #333533;
   display: grid;
@@ -127,7 +127,7 @@ export default {
 
 .power-tower {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .skill-icon {

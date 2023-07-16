@@ -24,9 +24,8 @@ export default {}
 
 <style scoped>
 .card-container {
-  display: grid;
-  width: 55rem;
-  grid-template-rows: 3fr 4fr;
+  width: 90rem;
+  height: 41rem;
   box-shadow: 1px 1px 1.5px 2px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 5;
@@ -34,6 +33,7 @@ export default {}
 
 .card-image-container {
   width: 100%;
+  height: 100%;
 }
 
 .card-buttons {
@@ -42,9 +42,14 @@ export default {}
 }
 
 .card-content {
-  background: #dee2e6;
-  grid-row: 2/3;
-  color: #333533;
+  position: absolute;
+  top: -50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  color: #dee2e6;
   font-size: 2.4rem;
   display: flex;
   flex-direction: column;
