@@ -74,9 +74,8 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 10;
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(45, 106, 79, 0.2));
-  color: #dee2e6;
+  z-index: 1;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0));
   font-size: 2.4rem;
   display: flex;
   flex-direction: column;
@@ -88,13 +87,6 @@ export default {
 .card-content h4 {
   font-size: 3.6rem;
 }
-
-.card-button {
-  width: 19.5rem;
-  font-size: 2.4rem;
-  color: #333533;
-}
-
 .technologies-logos {
   display: flex;
   gap: 3.2rem;

@@ -123,7 +123,6 @@ export default {
 
 .projects-title-container h2 {
   font-size: 12.6rem;
-  color: #dee2e6;
   letter-spacing: 3px;
   text-shadow: 5px 5px #52b788;
   padding-right: 1.2rem;
