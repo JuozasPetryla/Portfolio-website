@@ -4,6 +4,7 @@
       <div class="rectangle" v-if="show"></div>
       <h2>Contact me</h2>
     </div>
+    <h4>If you have any questions, or just want to talk, please feel free to contact me!</h4>
     <contact-form></contact-form>
   </section>
 </template>
@@ -30,9 +31,16 @@ export default {
   display: grid;
   justify-items: center;
   justify-content: center;
-  grid-template-rows: 1fr 3fr;
-  gap: 9.6rem;
+  grid-template-rows: 2fr 1fr 5fr;
+  gap: 4.8rem;
   overflow: hidden;
+}
+
+.contact-section h4 {
+  text-align: center;
+  font-size: 3.2rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  width: 70%;
 }
 .contact-title-container {
   margin-top: 2.4rem;

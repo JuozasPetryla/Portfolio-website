@@ -1,54 +1,192 @@
 <template>
-  <form class="contact-form">
-    <div class="form-control">
-      <label for="name"></label>
-      <input type="text" name="name" id="name" placeholder="Name" />
+  <form class="contact-form" @submit.prevent="formSubmit">
+    <div class="contact-form-container">
+      <div class="form-control">
+        <label for="name"></label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Name"
+          v-model.trim="form.name"
+          @blur="validateName"
+          @input="validateName"
+          :class="{ invalid: !nameIsValid }"
+        />
+        <p v-if="!nameIsValid" class="error-message">Please input a correct name</p>
+      </div>
+      <div class="form-control">
+        <label for="email"></label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          v-model.trim="form.email"
+          @blur="validateEmail"
+          @input="validateEmail"
+          :class="{ invalid: !nameIsValid }"
+        />
+        <p v-if="!emailIsValid" class="error-message">Please input a correct email</p>
+      </div>
+      <div class="form-control">
+        <label for="message"></label>
+        <textarea
+          type="text"
+          name="message"
+          id="message"
+          rows="5"
+          placeholder="Message"
+          v-model.trim="form.message"
+          @blur="validateMessage"
+          @input="validateMessage"
+          :class="{ invalid: !nameIsValid }"
+        />
+        <p v-if="!messageIsValid" class="error-message">Please input a message</p>
+      </div>
     </div>
-    <div class="form-control">
-      <label for="email"></label>
-      <input type="email" name="email" id="email" placeholder="Email" />
-    </div>
-    <div class="form-control">
-      <label for="message"></label>
-      <textarea type="text" name="message" id="message" rows="5" placeholder="Message" />
-    </div>
+    <base-button @click="validateForm" class="form-submit">Submit</base-button>
   </form>
 </template>
 
 <script>
-export default {}
+import { ref, reactive } from 'vue'
+export default {
+  setup() {
+    const form = reactive({
+      name: '',
+      email: '',
+      message: ''
+    })
+
+    const formIsValid = ref(false)
+    const nameIsValid = ref(true)
+    const emailIsValid = ref(true)
+    const messageIsValid = ref(true)
+
+    const formSubmit = function () {
+      if (!formIsValid.value) return
+      console.log(form)
+      form.name = ''
+      form.email = ''
+      form.message = ''
+    }
+
+    const validateName = function () {
+      if (form.name) {
+        nameIsValid.value = true
+      } else {
+        nameIsValid.value = false
+      }
+    }
+
+    const validateEmail = function () {
+      if (form.email && form.email.includes('@')) {
+        emailIsValid.value = true
+      } else {
+        emailIsValid.value = false
+      }
+    }
+
+    const validateMessage = function () {
+      if (form.message) {
+        messageIsValid.value = true
+      } else {
+        messageIsValid.value = false
+      }
+    }
+
+    const validateForm = function () {
+      validateName()
+      validateEmail()
+      validateMessage()
+      if (nameIsValid.value && emailIsValid.value && messageIsValid.value) {
+        formIsValid.value = true
+      } else {
+        formIsValid.value = false
+      }
+    }
+
+    return {
+      form,
+      formSubmit,
+      validateForm,
+      validateName,
+      validateEmail,
+      validateMessage,
+      nameIsValid,
+      emailIsValid,
+      messageIsValid,
+      formIsValid
+    }
+  }
+}
 </script>
 
 <style scoped>
 .contact-form {
   display: flex;
   flex-direction: column;
+  gap: 4.8rem;
   align-items: center;
-  gap: 2rem;
-  background: #40916c;
-  width: 125%;
-  border-radius: 8px;
-  height: 75%;
-  padding: 4.8rem 4.8rem;
-  box-shadow: 1.5px 2px 3px 1.5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 9.6rem;
 }
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+  background: #40916c;
+  width: 75rem;
+  border-radius: 4px;
+  height: 40rem;
+  box-shadow: 2px 2px 5px 1.5px rgba(0, 0, 0, 0.3);
+}
+
+.form-control {
+  position: relative;
+}
+
 input {
-  width: 50rem;
-  height: 3rem;
-  padding-left: 0.6rem;
-  font-size: 2rem;
-  background: #333533;
-  color: #dee2e6;
+  height: 4.5rem;
 }
 textarea {
-  width: 50rem;
   height: 15rem;
-  padding-left: 0.6rem;
   padding-top: 0.6rem;
-  font-size: 2rem;
+  resize: none;
+}
+
+textarea,
+input {
+  width: 60rem;
+  padding-left: 0.6rem;
+  font-size: 2.4rem;
   font-family: sans-serif;
   color: #dee2e6;
   background: #333533;
-  resize: none;
+  border: none;
+}
+
+textarea,
+input:focus {
+  outline: none;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #dee2e6 !important;
+  box-shadow: 0 0 0 1000px #333533 inset;
+  caret-color: #dee2e6;
+}
+
+.error-message {
+  position: absolute;
+  left: 0;
+  top: 105%;
+  font-size: 1.4rem;
+}
+
+.invalid {
+  border: 2px solid rgb(255, 0, 0);
 }
 </style>
