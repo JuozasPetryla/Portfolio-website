@@ -1,5 +1,6 @@
 <template>
   <section class="home-section">
+    <div class="transition-rect"></div>
     <base-background></base-background>
     <Transition name="title">
       <div class="landing-page-container">
@@ -51,7 +52,18 @@ export default {
   width: 100%;
   height: 20rem;
   border-left: 10px solid #40916c;
-  animation: moveRect 1s 1 cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+  animation: moveRect 1s 1 cubic-bezier(0.175, 0.885, 0.32, 1) forwards 1s;
+}
+
+.transition-rect {
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -100%;
+  bottom: 0;
+  z-index: 5;
+  animation: enterPage 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 
 @keyframes moveRect {
@@ -62,6 +74,20 @@ export default {
   100% {
     left: 100%;
     width: 1%;
+  }
+}
+
+@keyframes enterPage {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    right: 0;
+  }
+
+  100% {
+    left: 100%;
   }
 }
 
