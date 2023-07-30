@@ -1,5 +1,6 @@
 <template>
   <section class="home-section">
+    <base-background></base-background>
     <Transition name="title">
       <div class="landing-page-container">
         <div class="rectangle" v-if="show"></div>
@@ -12,8 +13,10 @@
 </template>
 
 <script>
+import BaseBackground from '../components/UI/BaseBackground.vue'
 import useAnimation from '../mixins/animation'
 export default {
+  components: { BaseBackground },
   setup() {
     const show = useAnimation()
     return { show }
@@ -23,14 +26,15 @@ export default {
 
 <style scoped>
 .home-section {
-  background: #333533;
   height: 100vh;
   width: 100%;
   display: grid;
   justify-content: center;
   justify-items: center;
+  background: #333533;
   grid-template-rows: 1fr 1fr;
   gap: 9.6rem;
+  position: relative;
 }
 
 .landing-page-container {

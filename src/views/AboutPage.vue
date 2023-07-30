@@ -1,5 +1,6 @@
 <template>
   <section class="about-section">
+    <base-background></base-background>
     <div class="about-header">
       <div class="about-title-container">
         <div class="rectangle" v-if="show"></div>
@@ -54,6 +55,7 @@ export default {
   grid-template-rows: 2fr 1fr 2fr;
   gap: 9.6rem;
   overflow: hidden;
+  position: relative;
 }
 
 .about-header {
@@ -70,6 +72,7 @@ export default {
   height: 45rem;
   overflow: hidden;
   animation: image 0.7s 1 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1;
 }
 
 @keyframes image {

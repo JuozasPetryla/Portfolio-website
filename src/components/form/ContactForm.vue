@@ -10,7 +10,7 @@
           placeholder="Name"
           v-model.trim="form.name"
           @blur="validateName"
-          @input="validateName"
+          v-debounce:300="validateName"
           :class="{ invalid: !nameIsValid }"
         />
         <p v-if="!nameIsValid" class="error-message">Please input a correct name</p>
@@ -24,8 +24,8 @@
           placeholder="Email"
           v-model.trim="form.email"
           @blur="validateEmail"
-          @input="validateEmail"
-          :class="{ invalid: !nameIsValid }"
+          v-debounce:300="validateEmail"
+          :class="{ invalid: !emailIsValid }"
         />
         <p v-if="!emailIsValid" class="error-message">Please input a correct email</p>
       </div>
@@ -38,11 +38,7 @@
           rows="5"
           placeholder="Message"
           v-model.trim="form.message"
-          @blur="validateMessage"
-          @input="validateMessage"
-          :class="{ invalid: !nameIsValid }"
         />
-        <p v-if="!messageIsValid" class="error-message">Please input a message</p>
       </div>
     </div>
     <base-button @click="validateForm" class="form-submit">Submit</base-button>
@@ -62,7 +58,6 @@ export default {
     const formIsValid = ref(false)
     const nameIsValid = ref(true)
     const emailIsValid = ref(true)
-    const messageIsValid = ref(true)
 
     const formSubmit = function () {
       if (!formIsValid.value) return
@@ -88,19 +83,10 @@ export default {
       }
     }
 
-    const validateMessage = function () {
-      if (form.message) {
-        messageIsValid.value = true
-      } else {
-        messageIsValid.value = false
-      }
-    }
-
     const validateForm = function () {
       validateName()
       validateEmail()
-      validateMessage()
-      if (nameIsValid.value && emailIsValid.value && messageIsValid.value) {
+      if (nameIsValid.value && emailIsValid.value) {
         formIsValid.value = true
       } else {
         formIsValid.value = false
@@ -113,10 +99,8 @@ export default {
       validateForm,
       validateName,
       validateEmail,
-      validateMessage,
       nameIsValid,
       emailIsValid,
-      messageIsValid,
       formIsValid
     }
   }
@@ -130,6 +114,7 @@ export default {
   gap: 4.8rem;
   align-items: center;
   margin-bottom: 9.6rem;
+  z-index: 1;
 }
 .contact-form-container {
   display: flex;

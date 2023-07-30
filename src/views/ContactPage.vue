@@ -1,5 +1,6 @@
 <template>
   <section class="contact-section">
+    <base-background></base-background>
     <div class="contact-title-container">
       <div class="rectangle" v-if="show"></div>
       <h2>Contact me</h2>
@@ -34,6 +35,7 @@ export default {
   grid-template-rows: 2fr 1fr 5fr;
   gap: 4.8rem;
   overflow: hidden;
+  position: relative;
 }
 
 .contact-section h4 {

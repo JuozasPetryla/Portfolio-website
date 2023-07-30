@@ -1,5 +1,6 @@
 <template>
   <section class="projects-section">
+    <base-background></base-background>
     <div class="projects-title-container">
       <div class="rectangle" v-if="show"></div>
       <h2>Projects</h2>
@@ -93,6 +94,7 @@ export default {
   grid-template-rows: 1fr 2fr;
   padding-bottom: 9.6rem;
   overflow: hidden;
+  position: relative;
 }
 .projects-title-container {
   margin-top: 2.4rem;
