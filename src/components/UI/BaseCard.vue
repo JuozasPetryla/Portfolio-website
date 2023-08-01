@@ -28,7 +28,6 @@ export default {
     const hoverProject = ref(false)
 
     function mouseOnProject() {
-      console.log('hi')
       hoverProject.value = true
     }
     function mouseOffProject() {
