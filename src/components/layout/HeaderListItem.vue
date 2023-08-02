@@ -1,5 +1,5 @@
 <template>
-  <li class="nav-list-item">
+  <li class="nav-list-item" >
     <router-link class="nav-link" :to="route" v-slot="{ isActive }">
       <div class="pseudo" :class="{ 'active-link': isActive }"></div>
       <slot></slot

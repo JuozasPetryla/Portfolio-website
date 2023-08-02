@@ -20,4 +20,18 @@ const router = createRouter({
   ]
 })
 
+function waitForSomeTime(delay) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, delay)
+  })
+}
+
+router.beforeEach(async (to, from, next) => {
+  const delay = 1000
+
+  await waitForSomeTime(delay)
+
+  next()
+})
+
 export default router

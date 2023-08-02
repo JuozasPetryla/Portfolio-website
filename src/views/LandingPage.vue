@@ -51,7 +51,7 @@ export default {
   width: 100%;
   height: 20rem;
   border-left: 10px solid #40916c;
-  animation: moveRect 1s 1 cubic-bezier(0.175, 0.885, 0.32, 1) forwards 1s;
+  animation: moveRect 1s 1 cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
 }
 
 @keyframes moveRect {

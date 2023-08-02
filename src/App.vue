@@ -1,5 +1,5 @@
 <template>
-  <the-header></the-header>
+  <the-header @triggerAnimation="onTriggerAnimation"></the-header>
   <transition>
     <div class="transition-rect" v-if="page"></div>
   </transition>
@@ -11,19 +11,23 @@
 </template>
 
 <script>
+import { ref } from 'vue'
 import TheHeader from './components/layout/TheHeader.vue'
 export default {
   components: {
     TheHeader
   },
-  computed: {
-    page() {
-      if (this.$route.name == 'about') {
-        return false
-      } else {
-        return true
-      }
+
+  setup() {
+    const page = ref(false)
+
+    const onTriggerAnimation = function () {
+      page.value = true
+
+      setTimeout(() => (page.value = false), 2000)
     }
+
+    return { page, onTriggerAnimation }
   }
 }
 </script>

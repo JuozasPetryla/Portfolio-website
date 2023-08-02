@@ -3,10 +3,16 @@
     <div class="header-logo"></div>
     <nav class="nav">
       <ul class="nav-list">
-        <header-list-item :route="'/'">Home</header-list-item>
-        <header-list-item :route="'/about'">About</header-list-item>
-        <header-list-item :route="'/projects'">Projects</header-list-item>
-        <header-list-item :route="'/contact'">Contact</header-list-item>
+        <header-list-item @click="$emit('triggerAnimation')" :route="'/'">Home</header-list-item>
+        <header-list-item @click="$emit('triggerAnimation')" :route="'/about'"
+          >About</header-list-item
+        >
+        <header-list-item @click="$emit('triggerAnimation')" :route="'/projects'"
+          >Projects</header-list-item
+        >
+        <header-list-item @click="$emit('triggerAnimation')" :route="'/contact'"
+          >Contact</header-list-item
+        >
       </ul>
     </nav>
   </header>
