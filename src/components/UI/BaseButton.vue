@@ -10,7 +10,7 @@ export default {}
 
 <style scoped>
 .btn {
-  width: 25.5rem;
+  width: 25.6rem;
   height: 7rem;
   padding: 1rem 1rem 0.4rem 1rem;
   font-size: 3.2rem;

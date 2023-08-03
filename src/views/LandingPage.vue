@@ -26,7 +26,7 @@ export default {
 
 <style scoped>
 .home-section {
-  height: 100vh;
+  height: 92.2vh;
   width: 100%;
   display: grid;
   justify-content: center;
