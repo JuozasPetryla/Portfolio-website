@@ -174,4 +174,13 @@ input:-webkit-autofill {
 .invalid {
   border: 2px solid rgb(255, 0, 0);
 }
+
+.form-submit {
+  transition: all 0.3s ease;
+  margin-bottom: 3.2rem;
+}
+
+.form-submit:hover {
+  color: #333533;
+}
 </style>

@@ -7,7 +7,7 @@
         <h2>About me</h2>
       </div>
       <div class="image-container" :class="show">
-        <img src="../assets/NuotraukaPortfolio.jpg" />
+        <img src="../assets/NuotraukaPortfolio.jpg" class="image" />
       </div>
     </div>
     <div class="about-text-container">
@@ -52,7 +52,7 @@ export default {
   display: grid;
   justify-items: center;
   justify-content: center;
-  grid-template-rows: 2fr 1fr 2fr;
+  grid-template-rows: 1fr 0.5fr 2fr;
   gap: 9.6rem;
   overflow: hidden;
   position: relative;
@@ -121,13 +121,64 @@ export default {
 .about-text-container {
   display: flex;
   justify-content: center;
-  width: 50%;
+  width: 75%;
 }
 
 .about-text-container p {
-  font-size: 3.2rem;
+  font-size: 4rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   color: #dee2e6;
   text-align: left;
+}
+
+@media (max-width: 1220px) {
+  .about-section {
+    grid-template-rows: 1fr 0.5fr 1.5fr;
+  }
+}
+@media (max-width: 1140px) {
+  .about-title-container h2 {
+    font-size: 9.6rem;
+  }
+  .image-container {
+    width: 35rem;
+    height: 35rem;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+  .about-section {
+    grid-template-rows: 1fr 0.5fr 1.5fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-text-container p {
+    font-size: 3.2rem;
+  }
+  .about-section {
+    grid-template-rows: 0.5fr 1fr 1fr;
+  }
+
+  .about-title-container h2 {
+    font-size: 7.8rem;
+  }
+  .image-container {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  .rectangle {
+    height: 10rem;
+  }
+  .image {
+    width: 100%;
+    height: auto;
+  }
+  .about-section {
+    grid-template-rows: 1fr 0.5fr 1.5fr;
+  }
 }
 </style>

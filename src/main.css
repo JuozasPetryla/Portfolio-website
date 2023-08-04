@@ -35,4 +35,9 @@ html {
 a {
   text-decoration: none;
   color: #dee2e6;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #333533;
 }

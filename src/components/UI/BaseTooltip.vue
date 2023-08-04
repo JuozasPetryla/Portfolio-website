@@ -28,4 +28,24 @@ export default {}
   color: #333533;
   font-weight: 600;
 }
+@media (max-width: 1140px) {
+  .tooltip-container {
+    border-radius: 7px;
+    height: 2.4rem;
+  }
+
+  .tooltip-container p {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 992px) {
+  .tooltip-container {
+    border-radius: 5px;
+    height: 1.5rem;
+  }
+
+  .tooltip-container p {
+    font-size: 1.1rem;
+  }
+}
 </style>

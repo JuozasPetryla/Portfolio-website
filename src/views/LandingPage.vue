@@ -15,10 +15,14 @@
 </template>
 
 <script>
+import useAnimation from '../mixins/animation'
 import BaseBackground from '../components/UI/BaseBackground.vue'
 export default {
   components: { BaseBackground },
-
+  setup() {
+    const show = useAnimation()
+    return { show }
+  }
 }
 </script>
 
@@ -74,5 +78,19 @@ export default {
   font-size: 4.8rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   color: #dee2e6;
+}
+@media (max-width: 1140px) {
+  .landing-page-container h1 {
+    font-size: 9.6rem;
+  }
+
+  .rectangle {
+    width: 100%;
+    height: 14rem;
+  }
+
+  .landing-page-container h2 {
+    font-size: 3.2rem;
+  }
 }
 </style>

@@ -13,7 +13,7 @@
           <slot name="logos"></slot>
         </div>
         <div class="card-buttons">
-          <base-button><slot name="button-1"></slot></base-button>
+          <slot name="button-1"></slot>
           <base-button><slot name="button-2"></slot></base-button>
         </div>
       </div>
@@ -45,8 +45,8 @@ export default {
 
 <style scoped>
 .card-container {
-  width: 90rem;
-  height: 41rem;
+  width: 75rem;
+  height: 34rem;
   box-shadow: 1px 1px 1.5px 2px rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: hidden;
@@ -74,7 +74,7 @@ export default {
   left: 0;
   right: 0;
   z-index: 1;
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0));
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
   font-size: 2.4rem;
   display: flex;
   flex-direction: column;
@@ -108,5 +108,17 @@ export default {
   opacity: 1;
   z-index: 1;
   transform: translateY(0);
+}
+@media (max-width: 992px) {
+  .card-container {
+    width: 65rem;
+    height: 29rem;
+  }
+  .card-content {
+    font-size: 1.8rem;
+  }
+  .card-content h4 {
+    font-size: 2.4rem;
+  }
 }
 </style>

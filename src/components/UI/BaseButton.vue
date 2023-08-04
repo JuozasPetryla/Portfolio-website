@@ -1,6 +1,8 @@
 <template>
   <button class="btn">
-    <slot class="btn-text"></slot>
+    <span>
+      <slot class="btn-text"></slot>
+    </span>
   </button>
 </template>
 
@@ -31,6 +33,13 @@ export default {}
 .btn:hover,
 .btn:active {
   cursor: pointer;
+}
+
+span {
+  transition: all 0.3s ease;
+}
+
+span:hover {
   color: #333533;
 }
 
@@ -51,5 +60,12 @@ export default {}
 .btn:hover::before,
 .btn:active::before {
   transform: scaleY(1);
+}
+
+@media (max-width: 992px) {
+  .btn {
+    width: 19rem;
+    font-size: 2.4rem;
+  }
 }
 </style>

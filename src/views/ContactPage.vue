@@ -34,7 +34,6 @@ export default {
   justify-content: center;
   grid-template-rows: 2fr 1fr 5fr;
   gap: 4.8rem;
-  overflow: hidden;
   position: relative;
 }
 
@@ -76,5 +75,14 @@ export default {
   letter-spacing: 3px;
   text-shadow: 5px 5px #52b788;
   padding-right: 1.2rem;
+}
+
+@media (max-width: 992px) {
+  .contact-title-container h2 {
+    font-size: 9.6rem;
+  }
+  .rectangle {
+    height: 12rem;
+  }
 }
 </style>

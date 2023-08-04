@@ -118,4 +118,91 @@ export default {
     top: 7.8%;
   }
 }
+
+@media (max-width: 1550px) {
+  .transition-rect {
+    top: 8%;
+  }
+  @keyframes enterPage {
+    0% {
+      top: 100%;
+      bottom: 0;
+    }
+
+    50% {
+      bottom: 0;
+      top: 8%;
+    }
+
+    100% {
+      bottom: 100%;
+      top: 8%;
+    }
+  }
+}
+@media (max-width: 1220px) {
+  .transition-rect {
+    top: 8%;
+  }
+  @keyframes enterPage {
+    0% {
+      top: 100%;
+      bottom: 0;
+    }
+
+    50% {
+      bottom: 0;
+      top: 8%;
+    }
+
+    100% {
+      bottom: 100%;
+      top: 8%;
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  .transition-rect {
+    top: 8.2%;
+  }
+  @keyframes enterPage {
+    0% {
+      top: 100%;
+      bottom: 0;
+    }
+
+    50% {
+      bottom: 0;
+      top: 8.2%;
+    }
+
+    100% {
+      bottom: 100%;
+      top: 8.2%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .transition-rect {
+    top: 8.2%;
+  }
+  @keyframes enterPage {
+    0% {
+      top: 100%;
+      bottom: 0;
+    }
+
+    50% {
+      bottom: 0;
+      top: 8.2%;
+    }
+
+    100% {
+      bottom: 100%;
+      top: 8.2%;
+    }
+  }
+}
 </style>
