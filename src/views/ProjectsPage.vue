@@ -70,15 +70,43 @@
         ><a href="https://github.com/JuozasPetryla/landing-page">Project GitHub</a></template
       >
     </base-card>
+    <base-card>
+      <template #image>
+        <img
+          class="power-tower"
+          src="../assets/PostApplication.png"
+          alt="Image of the post application app"
+        />
+      </template>
+      <template #content>
+        <p>
+          A full-stack app for posting posts, unit tested and documented. Full description on
+          GitHub.
+        </p>
+      </template>
+      <template #logos>
+        <img src="../assets/vue-9.svg" class="skill-icon" />
+        <img src="../assets/css-3.svg" class="skill-icon" />
+        <img src="../assets/expressjs_logo_icon_169185.svg" class="skill-icon" />
+        <img src="../assets/socketio-icon.svg" class="skill-icon" />
+        <img src="../assets/vite-svgrepo-com.svg" class="skill-icon" />
+      </template>
+      <template #button-1 v-if="!postRef"></template>
+      <template #button-2
+        ><a href="https://github.com/JuozasPetryla/landing-page">Project GitHub</a></template
+      >
+    </base-card>
   </section>
 </template>
 
 <script>
+import { ref } from 'vue'
 import useAnimation from '../mixins/animation'
 export default {
   setup() {
+    const postRef = ref(false)
     const show = useAnimation()
-    return { show }
+    return { show, postRef }
   }
 }
 </script>
@@ -92,6 +120,7 @@ export default {
   justify-items: center;
   justify-content: center;
   grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   padding-bottom: 9.6rem;
   overflow: hidden;
   position: relative;
@@ -99,6 +128,7 @@ export default {
 .projects-title-container {
   margin-top: 2.4rem;
   position: relative;
+  grid-column: 1/-1;
 }
 
 .rectangle {
