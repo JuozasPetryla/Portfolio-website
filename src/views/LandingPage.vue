@@ -8,19 +8,17 @@
         <h2>WEB DEVELOPER</h2>
       </div>
     </Transition>
-    <base-button class="btn">CONTACT ME</base-button>
+    <base-button @click="$emit('triggerAnimation')" class="btn"
+      ><router-link to="/contact">CONTACT ME</router-link>
+    </base-button>
   </section>
 </template>
 
 <script>
 import BaseBackground from '../components/UI/BaseBackground.vue'
-import useAnimation from '../mixins/animation'
 export default {
   components: { BaseBackground },
-  setup() {
-    const show = useAnimation()
-    return { show }
-  }
+
 }
 </script>
 

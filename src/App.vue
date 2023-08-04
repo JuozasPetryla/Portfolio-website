@@ -9,16 +9,12 @@
         <loading-screen></loading-screen>
       </div>
     </transition>
-    <router-view v-slot="{ Component }">
-      <transition name="slide">
-        <component :is="Component" />
-      </transition>
-    </router-view>
+    <router-view @triggerAnimation="onTriggerAnimation"></router-view>
   </div>
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import LoadingScreen from './components/layout/LoadingScreen.vue'
 
 import TheHeader from './components/layout/TheHeader.vue'
@@ -30,18 +26,29 @@ export default {
 
   setup() {
     const page = ref(false)
-    const loaded = ref(true)
+    const loaded = ref(false)
 
     const loadingAnimation = function () {
+      loaded.value = true
       setTimeout(() => (loaded.value = false), 4000)
     }
-
-    loadingAnimation()
 
     const onTriggerAnimation = function () {
       page.value = true
       setTimeout(() => (page.value = false), 2000)
     }
+
+    onMounted(() => {
+      onTriggerAnimation()
+      const hasExecuted = sessionStorage.getItem('functionExecuted')
+
+      if (hasExecuted === 'true') {
+        return
+      } else {
+        loadingAnimation()
+        sessionStorage.setItem('functionExecuted', 'true')
+      }
+    })
 
     return { page, onTriggerAnimation, loaded }
   }
