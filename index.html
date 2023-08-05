@@ -15,6 +15,20 @@
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
   </head>
   <body>
+    <form
+      netlify
+      netlify-honeypot="bot-field"
+      hidden
+      name="form-name"
+      value="contact"
+      method="POST"
+      action="/success"
+    >
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea type="text" name="message"></textarea>
+      <button type="submit"></button>
+    </form>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
