@@ -6,7 +6,7 @@
     method="POST"
     data-netlify="true"
   >
-    <input type="hidden" name="form-name" value="contact" />
+    <input type="hidden" name="contact" value="contact" />
     <div class="contact-form-container">
       <div class="form-control">
         <label for="name"></label>
