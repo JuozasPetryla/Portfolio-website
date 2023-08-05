@@ -121,4 +121,85 @@ export default {
     font-size: 2.4rem;
   }
 }
+
+@media (max-width: 768px) {
+  .card-container {
+    width: 57.5rem;
+    height: 26rem;
+  }
+  .card-content {
+    font-size: 1.6rem;
+  }
+  .card-content h4 {
+    font-size: 2rem;
+  }
+  .technologies-logos {
+    gap: 2.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .card-container {
+    width: 52.5rem;
+    height: 23.5rem;
+  }
+  .card-content {
+    font-size: 1.6rem;
+  }
+  .card-content h4 {
+    font-size: 2rem;
+  }
+  .technologies-logos {
+    gap: 2.4rem;
+  }
+}
+@media (max-width: 580px) {
+  .card-container {
+    width: 45rem;
+    height: 20rem;
+  }
+  .card-content {
+    font-size: 1.2rem;
+    gap: 1.2rem;
+  }
+  .card-content h4 {
+    font-size: 2rem;
+  }
+  .technologies-logos {
+    gap: 2.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .card-container {
+    width: 32.5rem;
+    height: 14.5rem;
+  }
+  .card-content {
+    font-size: 1.2rem;
+    gap: 0.6rem;
+    padding: 1rem;
+  }
+  .card-content h4 {
+    font-size: 1.4rem;
+  }
+  .technologies-logos {
+    gap: 2rem;
+  }
+}
+@media (max-width: 350px) {
+  .card-container {
+    width: 27rem;
+    height: 12rem;
+  }
+  .card-content {
+    font-size: 1rem;
+    gap: 0.4rem;
+    padding: 1rem;
+  }
+  .card-content h4 {
+    font-size: 1.4rem;
+  }
+  .technologies-logos {
+    gap: 1.2rem;
+  }
+}
 </style>

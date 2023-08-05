@@ -4,10 +4,13 @@ import App from './App.vue'
 import './main.css'
 import router from './router'
 
-import BaseButton from './components/UI/BaseButton.vue'
-import BaseTooltip from './components/UI/BaseTooltip.vue'
-import BaseCard from './components/UI/BaseCard.vue'
-import BaseBackground from './components/UI/BaseBackground.vue'
+import { defineAsyncComponent } from 'vue'
+
+const BaseButton = defineAsyncComponent(() => import('./components/UI/BaseButton.vue'))
+const BaseTooltip = defineAsyncComponent(() => import('./components/UI/BaseTooltip.vue'))
+const BaseCard = defineAsyncComponent(() => import('./components/UI/BaseCard.vue'))
+const BaseBackground = defineAsyncComponent(() => import('./components/UI/BaseBackground.vue'))
+
 const app = createApp(App)
 
 app.component('base-tooltip', BaseTooltip)

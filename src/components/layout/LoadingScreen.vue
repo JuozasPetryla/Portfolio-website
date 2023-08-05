@@ -30,10 +30,10 @@ export default {
   width: 80rem;
   border: 8px solid #52b788;
   z-index: 5;
-  position: relative;
   position: absolute;
   top: 50%;
-  left: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   animation: fade-out 1.5s cubic-bezier(0.175, 0.885, 0.32, 1) 3.5s forwards;
 }
 
@@ -77,5 +77,53 @@ p {
   top: 125%;
   font-size: 2.4rem;
   color: #52b788;
+}
+
+@media (max-width: 992px) {
+  .progress-bar {
+    height: 4rem;
+    width: 64rem;
+    border: 6px solid #52b788;
+  }
+}
+@media (max-width: 768px) {
+  .progress-bar {
+    height: 3rem;
+    width: 48rem;
+    border: 4px solid #52b788;
+  }
+}
+@media (max-width: 580px) {
+  .progress-bar {
+    height: 2rem;
+    width: 32rem;
+    border: 2px solid #52b788;
+  }
+
+  .progress-bar p {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .progress-bar {
+    height: 1.5rem;
+    width: 24rem;
+    border: 1px solid #52b788;
+  }
+
+  .progress-bar p {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 350px) {
+  .progress-bar {
+    height: 1rem;
+    width: 16rem;
+    border: 1px solid #52b788;
+  }
+
+  .progress-bar p {
+    font-size: 1.2rem;
+  }
 }
 </style>

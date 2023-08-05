@@ -167,7 +167,7 @@ input:-webkit-autofill {
 .error-message {
   position: absolute;
   left: 0;
-  top: 105%;
+  top: 100%;
   font-size: 1.4rem;
 }
 
@@ -182,5 +182,151 @@ input:-webkit-autofill {
 
 .form-submit:hover {
   color: #333533;
+}
+
+@media (max-width: 992px) {
+  .contact-form-container {
+    width: 70rem;
+  }
+
+  input,
+  textarea {
+    width: 57.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact-form-container {
+    width: 62.5rem;
+    height: 40rem;
+  }
+
+  input,
+  textarea {
+    width: 50rem;
+    font-size: 2rem;
+  }
+
+  input {
+    height: 4rem;
+  }
+
+  textarea {
+    height: 13.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact-form-container {
+    width: 55rem;
+    height: 32.5rem;
+    gap: 2.4rem;
+  }
+
+  .form-submit {
+    margin-bottom: 2.4rem;
+  }
+  input,
+  textarea {
+    width: 45rem;
+    font-size: 1.6rem;
+  }
+
+  input {
+    height: 3.2rem;
+  }
+
+  textarea {
+    height: 13.5rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .contact-form-container {
+    width: 45rem;
+    height: 29rem;
+    gap: 2.2rem;
+  }
+
+  .contact-form {
+    margin-bottom: 0;
+  }
+  .form-submit {
+    margin-bottom: 2.4rem;
+  }
+  input,
+  textarea {
+    width: 37.5rem;
+    font-size: 1.2rem;
+  }
+
+  input {
+    height: 3.2rem;
+  }
+
+  textarea {
+    height: 13.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact-form-container {
+    width: 33.5rem;
+    height: 22.5rem;
+    gap: 1.6rem;
+  }
+
+  .contact-form {
+    margin-bottom: 0;
+  }
+  .form-submit {
+    margin-bottom: 2.4rem;
+  }
+  input,
+  textarea {
+    width: 27.5rem;
+    font-size: 1.2rem;
+  }
+
+  input {
+    height: 2.2rem;
+  }
+  .error-message {
+    font-size: 1rem;
+  }
+
+  .invalid {
+    border: 0.5px solid rgb(255, 0, 0);
+  }
+  textarea {
+    height: 10rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .contact-form-container {
+    width: 25.5rem;
+    height: 18rem;
+    gap: 1.2rem;
+  }
+
+  .contact-form {
+    margin-bottom: 0;
+  }
+  .form-submit {
+    margin-bottom: 2rem;
+  }
+  input,
+  textarea {
+    width: 22rem;
+    font-size: 1rem;
+  }
+  .error-message {
+    font-size: 0.8rem;
+  }
+  input {
+    height: 2rem;
+  }
+
+  textarea {
+    height: 8rem;
+  }
 }
 </style>

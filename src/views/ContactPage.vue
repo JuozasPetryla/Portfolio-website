@@ -85,4 +85,71 @@ export default {
     height: 12rem;
   }
 }
+
+@media (max-width: 768px) {
+  .contact-title-container h2 {
+    font-size: 8rem;
+  }
+  .rectangle {
+    border-left: 7px solid #40916c;
+    height: 9rem;
+  }
+  .contact-section h4 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 660px) {
+  .contact-title-container h2 {
+    font-size: 7.2rem;
+  }
+  .rectangle {
+    border-left: 5px solid #40916c;
+    height: 8rem;
+  }
+  .contact-section h4 {
+    font-size: 2.4rem;
+  }
+
+  .contact-section {
+    grid-template-rows: 1fr 1fr 3.5fr;
+
+    gap: 2.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact-title-container h2 {
+    font-size: 4.8rem;
+  }
+  .rectangle {
+    border-left: 5px solid #40916c;
+    height: 5.5rem;
+  }
+  .contact-section h4 {
+    font-size: 2rem;
+  }
+
+  .contact-section {
+    grid-template-rows: 1fr 1fr 3fr;
+
+    gap: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact-title-container h2 {
+    font-size: 3.2rem;
+  }
+  .rectangle {
+    border-left: 4px solid #40916c;
+    height: 4.5rem;
+  }
+  .contact-section h4 {
+    font-size: 1.4rem;
+  }
+
+  .contact-section {
+    grid-template-rows: 1fr 1fr 3fr;
+
+    gap: 2rem;
+  }
+}
 </style>

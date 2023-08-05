@@ -9,7 +9,9 @@
         <loading-screen></loading-screen>
       </div>
     </transition>
-    <router-view @triggerAnimation="onTriggerAnimation"></router-view>
+    <div :class="{ 'disable-scroll': page }">
+      <router-view @triggerAnimation="onTriggerAnimation"></router-view>
+    </div>
   </div>
 </template>
 
@@ -59,10 +61,15 @@ export default {
 #app {
   overflow: hidden;
 }
+
+.disable-scroll {
+  height: 92.2vh;
+}
+
 .transition-rect {
   background: #2a2929;
   position: absolute;
-  top: 7.8%;
+  top: 7.2rem;
   left: 0;
   right: 0;
   bottom: 0;
@@ -79,7 +86,7 @@ export default {
   bottom: 0;
   overflow: hidden;
   z-index: 5;
-  animation: enterInitial 2s 1 cubic-bezier(0.19, 1, 0.22, 1) 5s forwards;
+  animation: enterInitial 2s 1 cubic-bezier(0.19, 1, 0.22, 1) 6s forwards;
 }
 
 .route-enter-active {
@@ -90,7 +97,7 @@ export default {
 }
 
 .initial-enter-active {
-  animation: enterInitial 2s 1 cubic-bezier(0.19, 1, 0.22, 1) 5s forwards;
+  animation: enterInitial 2s 1 cubic-bezier(0.19, 1, 0.22, 1) 6s forwards;
 }
 
 @keyframes enterInitial {
@@ -110,18 +117,18 @@ export default {
 
   50% {
     bottom: 0;
-    top: 7.8%;
+    top: 7.2rem;
   }
 
   100% {
     bottom: 100%;
-    top: 7.8%;
+    top: 7.2rem;
   }
 }
 
-@media (max-width: 1550px) {
+@media (max-width: 660px) {
   .transition-rect {
-    top: 8%;
+    top: 4.8rem;
   }
   @keyframes enterPage {
     0% {
@@ -131,18 +138,19 @@ export default {
 
     50% {
       bottom: 0;
-      top: 8%;
+      top: 4.8rem;
     }
 
     100% {
       bottom: 100%;
-      top: 8%;
+      top: 4.8rem;
     }
   }
 }
-@media (max-width: 1220px) {
+
+@media (max-width: 480px) {
   .transition-rect {
-    top: 8%;
+    top: 3.6rem;
   }
   @keyframes enterPage {
     0% {
@@ -152,56 +160,12 @@ export default {
 
     50% {
       bottom: 0;
-      top: 8%;
+      top: 3.6rem;
     }
 
     100% {
       bottom: 100%;
-      top: 8%;
-    }
-  }
-}
-
-@media (max-width: 1140px) {
-  .transition-rect {
-    top: 8.2%;
-  }
-  @keyframes enterPage {
-    0% {
-      top: 100%;
-      bottom: 0;
-    }
-
-    50% {
-      bottom: 0;
-      top: 8.2%;
-    }
-
-    100% {
-      bottom: 100%;
-      top: 8.2%;
-    }
-  }
-}
-
-@media (max-width: 992px) {
-  .transition-rect {
-    top: 8.2%;
-  }
-  @keyframes enterPage {
-    0% {
-      top: 100%;
-      bottom: 0;
-    }
-
-    50% {
-      bottom: 0;
-      top: 8.2%;
-    }
-
-    100% {
-      bottom: 100%;
-      top: 8.2%;
+      top: 3.6rem;
     }
   }
 }

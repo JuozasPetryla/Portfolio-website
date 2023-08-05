@@ -68,4 +68,38 @@ span:hover {
     font-size: 2.4rem;
   }
 }
+
+@media (max-width: 768px) {
+  .btn {
+    width: 17rem;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 660px) {
+  .btn {
+    width: 16rem;
+    font-size: 2rem;
+    height: 5rem;
+    padding: 0.8rem 0.8rem 0.4rem 0.8rem;
+    border-bottom: 0.6rem solid #40916c;
+  }
+}
+@media (max-width: 480px) {
+  .btn {
+    width: 12rem;
+    font-size: 1.4rem;
+    height: 4rem;
+    padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+    border-bottom: 0.4rem solid #40916c;
+  }
+}
+@media (max-width: 480px) {
+  .btn {
+    width: 10rem;
+    font-size: 1.2rem;
+    height: 3.2rem;
+    padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+    border-bottom: 0.4rem solid #40916c;
+  }
+}
 </style>

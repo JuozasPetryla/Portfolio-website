@@ -7,15 +7,15 @@
         <h2>About me</h2>
       </div>
       <div class="image-container" :class="show">
-        <img src="../assets/NuotraukaPortfolio.jpg" class="image" />
+        <img src="../assets/NuotraukaPortfolio.webp" class="image" />
       </div>
     </div>
     <div class="about-text-container">
       <p>
-        I am a Web Developer and a first year student in Kaunas University of Technology. I fell in
-        love with programming on my first year of university. Since then, I have been striving to
-        learn more about the field and improve my skills. I am competent in HTML, CSS, Javascript
-        and Vue.
+        I am a Web Developer and a first year software engineering student in Kaunas University of
+        Technology. I fell in love with programming before my first year of university. Since then,
+        I have been striving to learn more about new technologies in the field and improve my
+        skills.
       </p>
     </div>
     <skills-section></skills-section>
@@ -158,8 +158,11 @@ export default {
   .about-text-container p {
     font-size: 3.2rem;
   }
+  .about-text-container {
+    width: 85%;
+  }
   .about-section {
-    grid-template-rows: 0.5fr 1fr 1fr;
+    gap: 4.8rem;
   }
 
   .about-title-container h2 {
@@ -179,6 +182,127 @@ export default {
   }
   .about-section {
     grid-template-rows: 1fr 0.5fr 1.5fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-text-container p {
+    font-size: 2.4rem;
+  }
+  .about-text-container {
+    width: 80%;
+  }
+  .about-section {
+    grid-template-rows: 0.75fr 0.5fr 1.25fr;
+
+    gap: 3rem;
+  }
+
+  .about-header {
+    margin-top: 2.4rem;
+  }
+  .about-title-container h2 {
+    font-size: 6.4rem;
+  }
+  .image-container {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .rectangle {
+    height: 8rem;
+  }
+  .image {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 660px) {
+  .about-header {
+    flex-direction: column-reverse;
+    gap: 3.2rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .about-text-container p {
+    font-size: 2rem;
+  }
+
+  .about-section {
+    gap: 2.4rem;
+  }
+
+  .about-title-container h2 {
+    font-size: 5.2rem;
+  }
+  .image-container {
+    width: 20rem;
+    height: 20rem;
+    border: 10px solid #40916c;
+  }
+
+  .rectangle {
+    border-left: 7px solid #40916c;
+    height: 7rem;
+  }
+  .image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text-container p {
+    font-size: 1.8rem;
+  }
+
+  .about-section {
+    gap: 2rem;
+  }
+
+  .about-title-container h2 {
+    font-size: 3.8rem;
+  }
+  .image-container {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .rectangle {
+    border-left: 5px solid #40916c;
+    height: 5rem;
+  }
+  .image {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 350px) {
+  .about-text-container p {
+    font-size: 1.6rem;
+  }
+
+  .about-section {
+    gap: 1.2rem;
+  }
+
+  .about-title-container h2 {
+    font-size: 3.2rem;
+    text-shadow: 3px 3px #52b788;
+  }
+  .image-container {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .rectangle {
+    border-left: 4px solid #40916c;
+    height: 4rem;
+  }
+  .image {
+    width: 100%;
+    height: auto;
   }
 }
 </style>

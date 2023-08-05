@@ -9,7 +9,7 @@
       <template #image>
         <img
           class="power-tower"
-          src="../assets/PowerTowerImage.png"
+          src="../assets/PowerTowerImage.webp"
           alt="Image of a fake gym landing page"
         />
       </template>
@@ -36,7 +36,7 @@
       <template #image>
         <img
           class="power-tower"
-          src="../assets/PostApplication.png"
+          src="../assets/PostApplication.webp"
           alt="Image of the post application app"
         />
       </template>
@@ -50,7 +50,7 @@
         <img src="../assets/vue-9.svg" class="skill-icon" />
         <img src="../assets/css-3.svg" class="skill-icon" />
         <img src="../assets/expressjs_logo_icon_169185.svg" class="skill-icon" />
-        <img src="../assets/socketio-icon.svg" class="skill-icon" />
+        <img src="../assets/socket-io-icon.svg" class="skill-icon" />
         <img src="../assets/vite-svgrepo-com.svg" class="skill-icon" />
       </template>
       <template #button-2
@@ -152,12 +152,63 @@ export default {
     height: 4.8rem;
   }
 }
+@media (max-width: 768px) {
+  .projects-title-container h2 {
+    font-size: 8rem;
+  }
+  .rectangle {
+    height: 10rem;
+  }
+  .skill-icon {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
+@media (max-width: 660px) {
+  .projects-title-container h2 {
+    font-size: 6.4rem;
+  }
+
+  .projects-section {
+    gap: 3.2rem;
+  }
+  .rectangle {
+    border-left: 7px solid #40916c;
+    height: 8rem;
+  }
+}
+@media (max-width: 480px) {
+  .projects-title-container h2 {
+    font-size: 4.8rem;
+  }
+
+  .projects-section {
+    gap: 2rem;
+  }
+  .rectangle {
+    border-left: 5px solid #40916c;
+    height: 6rem;
+  }
+  .skill-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+@media (max-width: 350px) {
+  .projects-title-container h2 {
+    font-size: 3.2rem;
+  }
+
+  .projects-section {
+    gap: 1rem;
+  }
+  .rectangle {
+    border-left: 4px solid #40916c;
+    height: 4.5rem;
+  }
+  .skill-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
 </style>
-
-<!-- @media (min-width: 768px) { ... }
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { ... }
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { ... } -->

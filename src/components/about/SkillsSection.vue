@@ -64,7 +64,14 @@
         </skill-icons>
       </div>
     </div>
-    <base-button class="cv-button">Download CV</base-button>
+    <div class="download-buttons">
+      <base-button class="cv-button"
+        ><a href="../../assets/Juozas_Petryla_CV_EN.pdf" download>Download CV</a></base-button
+      >
+      <base-button class="cv-button"
+        ><a href="../../assets/Juozas_Petryle_CV_LT.pdf" download>Atsisiųsti CV</a></base-button
+      >
+    </div>
   </div>
 </template>
 
@@ -99,6 +106,12 @@ export default {
   text-align: center;
 }
 
+.download-buttons {
+  margin-top: 2.4rem;
+  display: flex;
+  gap: 2.4rem;
+}
+
 .backend,
 .other,
 .frontend {
@@ -106,7 +119,6 @@ export default {
   place-items: center;
   row-gap: 5.6rem;
   column-gap: 2.8rem;
-  place-items: center;
 }
 
 .frontend {
@@ -133,6 +145,7 @@ h4 {
   width: 110rem;
   text-align: center;
   grid-column: 1/-1;
+  padding: 0 1rem;
 }
 .skill-container {
   display: grid;
@@ -253,6 +266,180 @@ h4 {
   }
   .skills-section {
     grid-template-rows: 0.5fr 1fr 0.2fr;
+  }
+}
+@media (max-width: 768px) {
+  .skills-section h3 {
+    font-size: 4.8rem;
+    width: 55rem;
+  }
+  h4 {
+    font-size: 3rem;
+  }
+  .skill-icon {
+    width: 4em;
+    height: 4em;
+  }
+  .frontend {
+    grid-template-columns: 4.8rem 4.8rem 4.8rem;
+  }
+
+  .backend {
+    grid-template-columns: 5.2rem 5.2rem;
+  }
+  .backend,
+  .other,
+  .frontend {
+    row-gap: 2.2rem;
+    column-gap: 1rem;
+  }
+
+  .skill-container {
+    height: 22.5rem;
+    column-gap: 3.2em;
+  }
+  .other {
+    grid-template-columns: 5.2rem 5.2rem;
+  }
+  .skills-section {
+    grid-template-rows: 0.3fr 1fr 0.1fr;
+  }
+
+  .cv-button {
+    margin-bottom: 4.8rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .skills-section h3 {
+    font-size: 3.2rem;
+    width: 40rem;
+    text-shadow: 4px 4px #52b788;
+  }
+  h4 {
+    text-shadow: 2.5px 2.5px #52b788;
+
+    font-size: 2rem;
+  }
+  .skill-icon {
+    width: 3.2em;
+    height: 3.2em;
+  }
+  .frontend {
+    grid-template-columns: 4rem 4rem 4rem;
+  }
+
+  .backend {
+    grid-template-columns: 4.8rem 4.8rem;
+  }
+  .backend,
+  .other,
+  .frontend {
+    row-gap: 2.2rem;
+    column-gap: 1rem;
+  }
+
+  .skill-container {
+    height: 18rem;
+    column-gap: 3em;
+  }
+  .other {
+    grid-template-columns: 4.8rem 4.8rem;
+  }
+  .skills-section {
+    grid-template-rows: 0.2fr 0.6fr 0.1fr;
+  }
+
+  .cv-button {
+    margin-bottom: 3.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .skills-section h3 {
+    font-size: 2.4rem;
+    width: 33.5rem;
+    text-shadow: 3px 3px #52b788;
+  }
+  h4 {
+    text-shadow: 2px 2px #52b788;
+
+    font-size: 1.6rem;
+  }
+  .skill-icon {
+    width: 3.2em;
+    height: 3.2em;
+  }
+  .frontend {
+    grid-template-columns: 3.2rem 3.2rem 3.2rem;
+  }
+
+  .backend {
+    grid-template-columns: 3.6rem 3.6rem;
+  }
+  .backend,
+  .other,
+  .frontend {
+    row-gap: 1.6rem;
+    column-gap: 1rem;
+  }
+
+  .skill-container {
+    height: 15rem;
+    column-gap: 3em;
+  }
+  .other {
+    grid-template-columns: 3.6rem 3.6rem;
+  }
+  .skills-section {
+    grid-template-rows: 0.2fr 0.6fr 0.1fr;
+  }
+
+  .cv-button {
+    margin-bottom: 2.4rem;
+  }
+}
+@media (max-width: 350px) {
+  .skills-section h3 {
+    font-size: 2rem;
+    width: 25rem;
+    text-shadow: 2px 2px #52b788;
+  }
+  h4 {
+    text-shadow: 1px 1px #52b788;
+
+    font-size: 1.2rem;
+  }
+  .skill-icon {
+    width: 2.4em;
+    height: 2.4em;
+  }
+  .frontend {
+    grid-template-columns: 2.4rem 2.4rem 2.4rem;
+  }
+
+  .backend {
+    grid-template-columns: 3rem 3rem;
+  }
+  .backend,
+  .other,
+  .frontend {
+    row-gap: 1.2rem;
+    column-gap: 0.4rem;
+  }
+
+  .skill-container {
+    height: 12rem;
+    column-gap: 3em;
+  }
+  .other {
+    grid-template-columns: 3rem 3rem;
+  }
+  .skills-section {
+    grid-template-rows: 0.2fr 0.5fr 0.1fr;
+  }
+
+  .cv-button {
+    margin-bottom: 1.2rem;
   }
 }
 </style>

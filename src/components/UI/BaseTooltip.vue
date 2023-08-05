@@ -42,10 +42,27 @@ export default {}
   .tooltip-container {
     border-radius: 5px;
     height: 1.5rem;
+    padding: 0rem 1.4rem;
   }
 
   .tooltip-container p {
     font-size: 1.1rem;
+  }
+}
+@media (max-width: 580px) {
+  .tooltip-container {
+    border-radius: 3px;
+    height: 1.2rem;
+    padding: 0rem 1rem;
+  }
+
+  .tooltip-container p {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 580px) {
+  .tooltip-container {
+    height: 1.1rem;
   }
 }
 </style>

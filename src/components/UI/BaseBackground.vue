@@ -128,4 +128,25 @@
     opacity: 0;
   }
 }
+
+@media (max-width: 768px) {
+  .box {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: #52b788;
+  }
+}
+@media (max-width: 580px) {
+  .box {
+    width: 55px;
+    height: 55px;
+  }
+}
+@media (max-width: 580px) {
+  .box {
+    width: 40px;
+    height: 40px;
+  }
+}
 </style>

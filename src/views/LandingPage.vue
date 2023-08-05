@@ -93,4 +93,104 @@ export default {
     font-size: 3.2rem;
   }
 }
+
+@media (max-width: 992px) {
+  .landing-page-container h1 {
+    font-size: 7.8rem;
+  }
+
+  .rectangle {
+    width: 100%;
+    height: 12rem;
+  }
+
+  .landing-page-container h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-section {
+    grid-template-rows: 0.5fr 0.5fr;
+    gap: 6.4rem;
+  }
+  .landing-page-container h1 {
+    font-size: 6rem;
+  }
+
+  .rectangle {
+    width: 100%;
+    height: 10rem;
+  }
+
+  .landing-page-container h2 {
+    font-size: 2.4rem;
+  }
+}
+@media (max-width: 580px) {
+  .home-section {
+    gap: 4.8rem;
+  }
+  .landing-page-container h1 {
+    font-size: 4.8rem;
+  }
+
+  .landing-page-container {
+    margin-top: 15rem;
+  }
+
+  .rectangle {
+    width: 100%;
+    height: 8rem;
+    border-left: 7px solid #40916c;
+  }
+
+  .landing-page-container h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .home-section {
+    gap: 0rem;
+  }
+  .landing-page-container h1 {
+    font-size: 3.2rem;
+  }
+
+  .landing-page-container {
+    margin-top: 12.5rem;
+  }
+
+  .rectangle {
+    height: 6rem;
+    border-left: 5px solid #40916c;
+  }
+
+  .landing-page-container h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .home-section {
+    grid-template-rows: 1fr 1.5fr;
+  }
+  .landing-page-container h1 {
+    font-size: 2.6rem;
+    text-shadow: 3px 3px #52b788;
+  }
+
+  .landing-page-container {
+    margin-top: 10rem;
+  }
+
+  .rectangle {
+    height: 4.5rem;
+    border-left: 4px solid #40916c;
+  }
+
+  .landing-page-container h2 {
+    font-size: 1.6rem;
+  }
+}
 </style>
