@@ -69,9 +69,8 @@ export default {
     const formSubmit = async function () {
       if (!formIsValid.value) return
 
-      // Use the FormData API to create form data
       const formData = new FormData()
-      formData.append('form-name', 'your-form-name') // Replace with your actual form name
+      formData.append('form-name', 'contact-form')
       formData.append('name', form.name)
       formData.append('email', form.email)
       formData.append('message', form.message)
