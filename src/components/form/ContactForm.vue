@@ -68,40 +68,6 @@ export default {
     const nameIsValid = ref(true)
     const emailIsValid = ref(true)
 
-    const encode = function (data) {
-      return Object.keys(data)
-        .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-        .join('&')
-    }
-
-    const formSubmit = async function () {
-      if (!formIsValid.value) return
-
-      try {
-        const axiosConfig = {
-          header: { 'Content-Type': 'application/x-www-form-urlencoded' }
-        }
-        const response = await axios.post(
-          '/',
-          encode({
-            'form-name': 'ask-question',
-            ...form
-          }),
-          axiosConfig
-        )
-
-        if (response.ok) {
-          form.name = ''
-          form.email = ''
-          form.message = ''
-        } else {
-          console.error('Form submission failed')
-        }
-      } catch (error) {
-        console.error('Error submitting form:', error)
-      }
-    }
-
     const validateName = function () {
       if (form.name) {
         nameIsValid.value = true
@@ -130,13 +96,35 @@ export default {
 
     return {
       form,
-      formSubmit,
       validateForm,
       validateName,
       validateEmail,
       nameIsValid,
       emailIsValid,
       formIsValid
+    }
+  },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+        .join('&')
+    },
+    formSubmit() {
+      const axiosConfig = {
+        header: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      }
+      axios.post(
+        '/',
+        this.encode({
+          'form-name': 'ask-question',
+          ...this.form
+        }),
+        axiosConfig
+      )
+      this.form.name = ''
+      this.form.email = ''
+      this.form.message = ''
     }
   }
 }
