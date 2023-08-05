@@ -1,13 +1,12 @@
 <template>
   <form
     class="contact-form"
-    name="contact-form"
     @submit.prevent="formSubmit"
-    method="post"
+    name="contact"
+    method="POST"
     data-netlify="true"
-    data-netlify-honeypot="bot-field"
   >
-    <input type="hidden" name="form-name" value="contact-form" />
+    <input type="hidden" name="form-name" value="contact" />
     <div class="contact-form-container">
       <div class="form-control">
         <label for="name"></label>
@@ -68,6 +67,13 @@ export default {
     const nameIsValid = ref(true)
     const emailIsValid = ref(true)
 
+    const formSubmit = function () {
+      if (!formIsValid.value) return
+      form.name = ''
+      form.email = ''
+      form.message = ''
+    }
+
     const validateName = function () {
       if (form.name) {
         nameIsValid.value = true
@@ -101,30 +107,8 @@ export default {
       validateEmail,
       nameIsValid,
       emailIsValid,
-      formIsValid
-    }
-  },
-  methods: {
-    encode(data) {
-      return Object.keys(data)
-        .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-        .join('&')
-    },
-    formSubmit() {
-      const axiosConfig = {
-        header: { 'Content-Type': 'application/x-www-form-urlencoded' }
-      }
-      axios.post(
-        '/',
-        this.encode({
-          'form-name': 'contact-form',
-          ...this.form
-        }),
-        axiosConfig
-      )
-      this.form.name = ''
-      this.form.email = ''
-      this.form.message = ''
+      formIsValid,
+      formSubmit
     }
   }
 }
