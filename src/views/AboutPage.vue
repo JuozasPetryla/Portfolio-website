@@ -46,7 +46,7 @@ export default {
 
 <style scoped>
 .about-section {
-  height: 100%;
+  height: 105%;
   width: 100%;
   background: #333533;
   display: grid;

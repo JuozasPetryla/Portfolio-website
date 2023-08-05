@@ -113,7 +113,6 @@ export default {
   flex-direction: column;
   gap: 4.8rem;
   align-items: center;
-  margin-bottom: 9.6rem;
   z-index: 1;
 }
 .contact-form-container {
@@ -177,7 +176,6 @@ input:-webkit-autofill {
 
 .form-submit {
   transition: all 0.3s ease;
-  margin-bottom: 3.2rem;
 }
 
 .form-submit:hover {

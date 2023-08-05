@@ -12,17 +12,19 @@
     <div :class="{ 'disable-scroll': page }">
       <router-view @triggerAnimation="onTriggerAnimation"></router-view>
     </div>
+    <the-footer></the-footer>
   </div>
 </template>
 
 <script>
 import { ref, onMounted } from 'vue'
 import LoadingScreen from './components/layout/LoadingScreen.vue'
-
+import TheFooter from './components/layout/TheFooter.vue'
 import TheHeader from './components/layout/TheHeader.vue'
 export default {
   components: {
     TheHeader,
+    TheFooter,
     LoadingScreen
   },
 

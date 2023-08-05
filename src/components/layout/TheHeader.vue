@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="header-logo"></div>
+    <div class="header-logo" v-if="!mobile"></div>
     <div class="nav-flex">
       <nav class="nav" v-if="!mobile">
         <ul class="nav-list">
@@ -118,6 +118,9 @@ header {
   list-style: none;
   gap: 6.4rem;
 }
+
+
+
 
 .nav-mobile-list-item {
   font-size: 6.4rem;

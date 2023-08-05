@@ -111,7 +111,7 @@ export default {
   }
 
   .contact-section {
-    grid-template-rows: 1fr 1fr 3.5fr;
+    grid-template-rows: 0.5fr 0.5fr 3.5fr;
 
     gap: 2.4rem;
   }
@@ -147,7 +147,7 @@ export default {
   }
 
   .contact-section {
-    grid-template-rows: 1fr 1fr 3fr;
+    grid-template-rows: 0.3fr 0.3fr 3fr;
 
     gap: 2rem;
   }
