@@ -66,12 +66,18 @@
     </div>
     <div class="download-buttons">
       <base-button class="cv-button"
-        ><a href="https://drive.google.com/file/d/1CacUNehK8W1T8FFjpdNdoXf29-6QhVPE/view?usp=sharing" download>Download CV</a></base-button
+        ><a
+          href="https://drive.google.com/file/d/1CacUNehK8W1T8FFjpdNdoXf29-6QhVPE/view?usp=sharing"
+          download
+          target="_blank"
+          >Download CV</a
+        ></base-button
       >
       <base-button class="cv-button"
         ><a
           href="https://drive.google.com/file/d/1jYDsQXWcuuryCf3fq5bNmIhdUgj5JLOT/view?usp=sharing"
           download
+          target="_blank"
           >Atsisiųsti CV</a
         ></base-button
       >

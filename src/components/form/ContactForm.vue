@@ -1,5 +1,13 @@
 <template>
-  <form class="contact-form" @submit.prevent="formSubmit">
+  <form
+    name="get-submit"
+    method="post"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    class="contact-form"
+    @submit.prevent="formSubmit"
+  >
+    <input type="hidden" name="form-name" value="get-submit" />
     <div class="contact-form-container">
       <div class="form-control">
         <label for="name"></label>
@@ -47,6 +55,7 @@
 
 <script>
 import { ref, reactive } from 'vue'
+import axios from 'axios'
 export default {
   setup() {
     const form = reactive({
@@ -59,9 +68,27 @@ export default {
     const nameIsValid = ref(true)
     const emailIsValid = ref(true)
 
+    const encode = function (data) {
+      return Object.keys(data)
+        .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+        .join('&')
+    }
+
     const formSubmit = function () {
       if (!formIsValid.value) return
-      console.log(form)
+      const axiosConfig = {
+        header: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      }
+      axios.post(
+        '/',
+        encode({
+          'form-name': 'get-submit',
+          name: form.name,
+          email: form.email,
+          message: form.message
+        }),
+        axiosConfig
+      )
       form.name = ''
       form.email = ''
       form.message = ''

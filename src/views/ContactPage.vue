@@ -26,7 +26,7 @@ export default {
 
 <style scoped>
 .contact-section {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background: #333533;
   display: grid;
