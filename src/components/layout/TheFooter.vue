@@ -61,7 +61,7 @@ export default {}
 
 <style>
 footer {
-  margin-top: 20rem;
+  margin-top: 22.5rem;
   background: #52b788;
   display: flex;
   justify-content: space-between;

@@ -66,10 +66,10 @@
     </div>
     <div class="download-buttons">
       <base-button class="cv-button"
-        ><a href="../../assets/Juozas_Petryla_CV_EN.pdf" download>Download CV</a></base-button
+        ><a href="/downloads/Juozas_Petryla_CV_EN.pdf" download>Download CV</a></base-button
       >
       <base-button class="cv-button"
-        ><a href="../../assets/Juozas_Petryle_CV_LT.pdf" download>Atsisiųsti CV</a></base-button
+        ><a href="/downloads/Juozas_Petryle_CV_LT.pdf" download>Atsisiųsti CV</a></base-button
       >
     </div>
   </div>
