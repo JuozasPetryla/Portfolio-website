@@ -3,10 +3,11 @@
     class="contact-form"
     name="contact-form"
     @submit.prevent="formSubmit"
+    method="post"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
   >
-    <input type="hidden" name="contact-form" value="contact-form" />
+    <input type="hidden" name="form-name" value="contact-form" />
     <div class="contact-form-container">
       <div class="form-control">
         <label for="name"></label>
@@ -78,6 +79,7 @@ export default {
       try {
         const response = await fetch('/', {
           method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: formData
         })
 
