@@ -110,11 +110,11 @@ export default {
         .join('&')
     },
     formSubmit() {
+      console.log(this.form.name)
       if (!this.formIsValid) return
       const axiosConfig = {
         header: { 'Content-Type': 'application/x-www-form-urlencoded' }
       }
-      this.form.speaker = this.speaker.name
       axios.post(
         '/',
         this.encode({
