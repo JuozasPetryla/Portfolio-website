@@ -1,13 +1,12 @@
 <template>
   <form
-    name="get-submit"
-    method="post"
+    class="contact-form"
+    name="contact-form"
+    @submit.prevent="formSubmit"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
-    class="contact-form"
-    @submit.prevent="formSubmit"
   >
-    <input type="hidden" name="form-name" value="get-submit" />
+    <input type="hidden" name="contact-form" value="contact-form" />
     <div class="contact-form-container">
       <div class="form-control">
         <label for="name"></label>
@@ -55,7 +54,6 @@
 
 <script>
 import { ref, reactive } from 'vue'
-import axios from 'axios'
 export default {
   setup() {
     const form = reactive({
@@ -68,30 +66,32 @@ export default {
     const nameIsValid = ref(true)
     const emailIsValid = ref(true)
 
-    const encode = function (data) {
-      return Object.keys(data)
-        .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-        .join('&')
-    }
-
-    const formSubmit = function () {
+    const formSubmit = async function () {
       if (!formIsValid.value) return
-      const axiosConfig = {
-        header: { 'Content-Type': 'application/x-www-form-urlencoded' }
+
+      // Use the FormData API to create form data
+      const formData = new FormData()
+      formData.append('form-name', 'your-form-name') // Replace with your actual form name
+      formData.append('name', form.name)
+      formData.append('email', form.email)
+      formData.append('message', form.message)
+
+      try {
+        const response = await fetch('/', {
+          method: 'POST',
+          body: formData
+        })
+
+        if (response.ok) {
+          form.name = ''
+          form.email = ''
+          form.message = ''
+        } else {
+          console.error('Form submission failed')
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error)
       }
-      axios.post(
-        '/',
-        encode({
-          'form-name': 'get-submit',
-          name: form.name,
-          email: form.email,
-          message: form.message
-        }),
-        axiosConfig
-      )
-      form.name = ''
-      form.email = ''
-      form.message = ''
     }
 
     const validateName = function () {
