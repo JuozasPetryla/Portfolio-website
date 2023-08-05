@@ -67,13 +67,6 @@ export default {
     const nameIsValid = ref(true)
     const emailIsValid = ref(true)
 
-    const formSubmit = function () {
-      if (!formIsValid.value) return
-      form.name = ''
-      form.email = ''
-      form.message = ''
-    }
-
     const validateName = function () {
       if (form.name) {
         nameIsValid.value = true
@@ -110,7 +103,36 @@ export default {
       formIsValid,
       formSubmit
     }
+  },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`,
+        )
+        .join('&');
+    },
+    formSubmit() {
+      if (!this.formIsValid) return
+      const axiosConfig = {
+        header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      };
+      this.form.speaker = this.speaker.name;
+      axios.post(
+        '/',
+        this.encode({
+          'form-name': 'contact',
+          ...this.form,
+        }),
+        axiosConfig,
+      );
+      this.form.name = ''
+      this.form.email = ''
+      this.form.message = ''
+    },
+  },
   }
+
 }
 </script>
 
