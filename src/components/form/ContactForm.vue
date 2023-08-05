@@ -100,39 +100,34 @@ export default {
       validateEmail,
       nameIsValid,
       emailIsValid,
-      formIsValid,
-      formSubmit
+      formIsValid
     }
   },
   methods: {
     encode(data) {
       return Object.keys(data)
-        .map(
-          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`,
-        )
-        .join('&');
+        .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+        .join('&')
     },
     formSubmit() {
       if (!this.formIsValid) return
       const axiosConfig = {
-        header: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      };
-      this.form.speaker = this.speaker.name;
+        header: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      }
+      this.form.speaker = this.speaker.name
       axios.post(
         '/',
         this.encode({
           'form-name': 'contact',
-          ...this.form,
+          ...this.form
         }),
-        axiosConfig,
-      );
+        axiosConfig
+      )
       this.form.name = ''
       this.form.email = ''
       this.form.message = ''
-    },
-  },
+    }
   }
-
 }
 </script>
 
