@@ -54,6 +54,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import { ref, reactive } from 'vue'
 export default {
   setup() {
@@ -67,21 +68,27 @@ export default {
     const nameIsValid = ref(true)
     const emailIsValid = ref(true)
 
+    const encode = function (data) {
+      return Object.keys(data)
+        .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+        .join('&')
+    }
+
     const formSubmit = async function () {
       if (!formIsValid.value) return
 
-      const formData = new FormData()
-      formData.append('form-name', 'contact-form')
-      formData.append('name', form.name)
-      formData.append('email', form.email)
-      formData.append('message', form.message)
-
       try {
-        const response = await fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: formData
-        })
+        const axiosConfig = {
+          header: { 'Content-Type': 'application/x-www-form-urlencoded' }
+        }
+        const response = await axios.post(
+          '/',
+          encode({
+            'form-name': 'ask-question',
+            ...form
+          }),
+          axiosConfig
+        )
 
         if (response.ok) {
           form.name = ''
