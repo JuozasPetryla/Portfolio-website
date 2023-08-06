@@ -5,6 +5,7 @@
     name="contact"
     method="POST"
     data-netlify="true"
+    data-netlify-success="/success"
   >
     <input type="hidden" name="contact" value="contact" />
     <div class="contact-form-container">
