@@ -1,7 +1,7 @@
 <template>
   <form
     class="contact-form"
-    @submit.prevent="formSubmit(), $emit('triggerAnimation')"
+    @submit.prevent="formSubmit()"
     name="contact"
     method="POST"
     data-netlify="true"
@@ -111,6 +111,7 @@ export default {
     },
     formSubmit() {
       if (!this.formIsValid) return
+      this.$emit('triggerAnimation')
       const axiosConfig = {
         header: { 'Content-Type': 'application/x-www-form-urlencoded' }
       }
