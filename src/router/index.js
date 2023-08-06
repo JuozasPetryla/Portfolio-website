@@ -3,6 +3,8 @@ import LandingPage from '../views/LandingPage.vue'
 import AboutPage from '../views/AboutPage.vue'
 import ProjectsPage from '../views/ProjectsPage.vue'
 import ContactPage from '../views/ContactPage.vue'
+import FormSuccess from '../views/FormSuccess.vue'
+import FormFail from '../views/FormFail.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,7 +18,17 @@ const router = createRouter({
     },
     { path: '/about', name: 'about', component: AboutPage },
     { path: '/projects', name: 'projects', component: ProjectsPage },
-    { path: '/contact', name: 'contact', component: ContactPage }
+    { path: '/contact', name: 'contact', component: ContactPage },
+    {
+      path: '/success',
+      name: 'success',
+      component: FormSuccess
+    },
+    {
+      path: '/fail',
+      name: 'fail',
+      component: FormFail
+    }
   ]
 })
 

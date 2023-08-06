@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="{ 'fixed-pos': positionFixed }">
     <the-header @triggerAnimation="onTriggerAnimation"></the-header>
     <transition name="route">
       <div class="transition-rect" v-if="page"></div>
@@ -31,15 +31,24 @@ export default {
   setup() {
     const page = ref(false)
     const loaded = ref(false)
+    const positionFixed = ref(false)
 
     const loadingAnimation = function () {
       loaded.value = true
-      setTimeout(() => (loaded.value = false), 4000)
+      positionFixed.value = true
+      setTimeout(() => {
+        positionFixed.value = false
+        loaded.value = false
+      }, 4000)
     }
 
     const onTriggerAnimation = function () {
+      positionFixed.value = true
       page.value = true
-      setTimeout(() => (page.value = false), 2000)
+      setTimeout(() => {
+        positionFixed.value = false
+        page.value = false
+      }, 2000)
     }
 
     onMounted(() => {
@@ -54,7 +63,7 @@ export default {
       }
     })
 
-    return { page, onTriggerAnimation, loaded }
+    return { page, onTriggerAnimation, loaded, positionFixed }
   }
 }
 </script>
@@ -64,8 +73,8 @@ export default {
   overflow: hidden;
 }
 
-.disable-scroll {
-  height: 92.2vh;
+.fixed-pos {
+  height: 100vh;
 }
 
 .transition-rect {

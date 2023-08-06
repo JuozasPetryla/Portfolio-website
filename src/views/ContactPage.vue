@@ -6,7 +6,7 @@
       <h2>Contact me</h2>
     </div>
     <h4>If you have any questions, or just want to talk, please feel free to contact me!</h4>
-    <contact-form></contact-form>
+    <contact-form @triggerAnimation="$emit('triggerAnimation')"></contact-form>
   </section>
 </template>
 
@@ -35,6 +35,7 @@ export default {
   grid-template-rows: 2fr 1fr 5fr;
   gap: 4.8rem;
   position: relative;
+  overflow: hidden;
 }
 
 .contact-section h4 {

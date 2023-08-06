@@ -1,11 +1,10 @@
 <template>
   <form
     class="contact-form"
-    @submit.prevent="formSubmit"
+    @submit.prevent="formSubmit(), $emit('triggerAnimation')"
     name="contact"
     method="POST"
     data-netlify="true"
-    data-netlify-success="/success"
   >
     <input type="hidden" name="contact" value="contact" />
     <div class="contact-form-container">
@@ -111,19 +110,25 @@ export default {
         .join('&')
     },
     formSubmit() {
-      console.log(this.form.name)
       if (!this.formIsValid) return
       const axiosConfig = {
         header: { 'Content-Type': 'application/x-www-form-urlencoded' }
       }
-      axios.post(
-        '/',
-        this.encode({
-          'form-name': 'contact',
-          ...this.form
-        }),
-        axiosConfig
-      )
+      axios
+        .post(
+          '/',
+          this.encode({
+            'form-name': 'contact',
+            ...this.form
+          }),
+          axiosConfig
+        )
+        .then(() => {
+          this.$router.push('success')
+        })
+        .catch(() => {
+          this.$router.push('fail')
+        })
       this.form.name = ''
       this.form.email = ''
       this.form.message = ''
