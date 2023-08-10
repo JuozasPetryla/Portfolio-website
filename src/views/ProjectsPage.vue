@@ -53,6 +53,13 @@
         <img src="../assets/socket-io-icon.svg" class="skill-icon" />
         <img src="../assets/vite-svgrepo-com.svg" class="skill-icon" />
       </template>
+      <template #button-1
+        ><base-button
+          ><a href="https://post-application-full.netlify.app/" target="_blank"
+            >Visit site</a
+          ></base-button
+        ></template
+      >
       <template #button-2
         ><a href="https://github.com/JuozasPetryla/post-application-fullstack-full" target="_blank"
           >Project GitHub</a
