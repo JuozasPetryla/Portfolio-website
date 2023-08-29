@@ -9,25 +9,28 @@
       <template #image>
         <img
           class="power-tower"
-          src="../assets/PowerTowerImage.webp"
-          alt="Image of a fake gym landing page"
+          src="../assets/contactsystem.webp"
+          alt="Image of the contacts system app"
         />
       </template>
       <template #content>
-        <p>A fictional powerlifting gym landing page.</p>
+        <p>A complicated contacts management system for Teltonika. Full description on GitHub.</p>
       </template>
       <template #logos>
-        <img src="../assets/html-1.svg" class="skill-icon" />
-        <img src="../assets/css-3.svg" class="skill-icon" />
-        <img src="../assets/logo-javascript.svg" class="skill-icon" />
+        <img src="../assets/vue-9.svg" class="skill-icon" />
+        <img src="../assets/file_type_tailwind_icon_130128.svg" class="skill-icon" />
+        <img src="../assets/pocketbase-seeklogo.com.svg" class="skill-icon" />
+        <img src="../assets/vite-svgrepo-com.svg" class="skill-icon" />
       </template>
       <template #button-1
         ><base-button
-          ><a href="https://powertower.netlify.app/" target="_blank">Visit site</a></base-button
+          ><a href="https://contacts-system.netlify.app/" target="_blank"
+            >Visit site</a
+          ></base-button
         ></template
       >
       <template #button-2
-        ><a href="https://github.com/JuozasPetryla/landing-page" target="_blank"
+        ><a href="https://github.com/JuozasPetryla/contacts-system" target="_blank"
           >Project GitHub</a
         ></template
       >
@@ -62,6 +65,33 @@
       >
       <template #button-2
         ><a href="https://github.com/JuozasPetryla/post-application-fullstack-full" target="_blank"
+          >Project GitHub</a
+        ></template
+      >
+    </base-card>
+    <base-card>
+      <template #image>
+        <img
+          class="power-tower"
+          src="../assets/PowerTowerImage.webp"
+          alt="Image of a fake gym landing page"
+        />
+      </template>
+      <template #content>
+        <p>A fictional powerlifting gym landing page.</p>
+      </template>
+      <template #logos>
+        <img src="../assets/html-1.svg" class="skill-icon" />
+        <img src="../assets/css-3.svg" class="skill-icon" />
+        <img src="../assets/logo-javascript.svg" class="skill-icon" />
+      </template>
+      <template #button-1
+        ><base-button
+          ><a href="https://powertower.netlify.app/" target="_blank">Visit site</a></base-button
+        ></template
+      >
+      <template #button-2
+        ><a href="https://github.com/JuozasPetryla/landing-page" target="_blank"
           >Project GitHub</a
         ></template
       >
