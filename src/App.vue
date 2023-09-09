@@ -12,7 +12,7 @@
     <div :class="{ 'disable-scroll': page }">
       <router-view @triggerAnimation="onTriggerAnimation"></router-view>
     </div>
-    <the-footer></the-footer>
+    <the-footer :class="{ hidden: page }"></the-footer>
   </div>
 </template>
 
@@ -73,8 +73,13 @@ export default {
   overflow: hidden;
 }
 
-.fixed-pos {
+.hidden {
+  opacity: 0;
+}
+.disable-scroll {
+  position: fixed;
   height: 100vh;
+  width: 100vw;
 }
 
 .transition-rect {
