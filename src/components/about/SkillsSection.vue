@@ -25,8 +25,8 @@
           <img src="../../assets/file_type_tailwind_icon_130128.svg" class="skill-icon" />
         </skill-icons>
         <skill-icons>
-          <template #logo><p>Vite</p></template>
-          <img src="../../assets/vite-svgrepo-com.svg" class="skill-icon" />
+          <template #logo><p>React</p></template>
+          <img src="../../assets/react-js-icon.svg" class="skill-icon" />
         </skill-icons>
       </div>
       <div class="backend">
