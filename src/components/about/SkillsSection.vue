@@ -40,12 +40,8 @@
           <img src="../../assets/socket-io-icon.svg" class="skill-icon socket" />
         </skill-icons>
         <skill-icons>
-          <template #logo><p>SQLite</p></template>
-          <img src="../../assets/sqlite_logo_icon_169724.svg" class="skill-icon" />
-        </skill-icons>
-        <skill-icons>
-          <template #logo><p>Postman</p></template>
-          <img src="../../assets/postman-icon-svgrepo-com.svg" class="skill-icon" />
+          <template #logo><p>SQL</p></template>
+          <img src="../../assets/sql-database-generic-svgrepo-com.svg" class="skill-icon" />
         </skill-icons>
       </div>
       <div class="other">
@@ -61,6 +57,10 @@
         <skill-icons>
           <template #logo><p>Github</p></template>
           <img src="../../assets/github.svg" class="skill-icon" />
+        </skill-icons>
+        <skill-icons>
+          <template #logo><p>Postman</p></template>
+          <img src="../../assets/postman-icon-svgrepo-com.svg" class="skill-icon" />
         </skill-icons>
       </div>
     </div>
