@@ -10,9 +10,7 @@
       </div>
     </transition>
     <div :class="{ 'disable-scroll': positionFixed || loaded }">
-      <div class="relative-container">
-        <router-view @triggerAnimation="onTriggerAnimation"></router-view>
-      </div>
+      <router-view @triggerAnimation="onTriggerAnimation"></router-view>
     </div>
     <the-footer :class="{ hidden: page }"></the-footer>
   </div>
