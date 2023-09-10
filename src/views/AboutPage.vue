@@ -25,7 +25,6 @@
 <script>
 import { ref } from 'vue'
 import useAnimation from '../mixins/animation'
-
 import SkillsSection from '../components/about/SkillsSection.vue'
 export default {
   components: {
@@ -46,7 +45,7 @@ export default {
 
 <style scoped>
 .about-section {
-  height: 105%;
+  height: 100%;
   width: 100%;
   background: #333533;
   display: grid;

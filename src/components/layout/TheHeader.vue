@@ -119,9 +119,6 @@ header {
   gap: 6.4rem;
 }
 
-
-
-
 .nav-mobile-list-item {
   font-size: 6.4rem;
 }

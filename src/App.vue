@@ -9,7 +9,7 @@
         <loading-screen></loading-screen>
       </div>
     </transition>
-    <div :class="{ 'disable-scroll': page }">
+    <div :class="{ 'disable-scroll': positionFixed }">
       <router-view @triggerAnimation="onTriggerAnimation"></router-view>
     </div>
     <the-footer :class="{ hidden: page }"></the-footer>
@@ -77,8 +77,7 @@ export default {
   opacity: 0;
 }
 .disable-scroll {
-  position: fixed;
-  height: 100vh;
+  max-height: 80.25vh;
   width: 100vw;
 }
 
@@ -142,9 +141,18 @@ export default {
   }
 }
 
+@media (max-width: 768px) {
+  .disable-scroll {
+    max-height: 59vh;
+  }
+}
+
 @media (max-width: 660px) {
   .transition-rect {
     top: 4.8rem;
+  }
+  .disable-scroll {
+    max-height: 76vh;
   }
   @keyframes enterPage {
     0% {
@@ -168,6 +176,9 @@ export default {
   .transition-rect {
     top: 3.6rem;
   }
+  .disable-scroll {
+    max-height: 81vh;
+  }
   @keyframes enterPage {
     0% {
       top: 100%;
@@ -183,6 +194,12 @@ export default {
       bottom: 100%;
       top: 3.6rem;
     }
+  }
+}
+
+@media (max-width: 350px) {
+  .disable-scroll {
+    max-height: 85vh;
   }
 }
 </style>
