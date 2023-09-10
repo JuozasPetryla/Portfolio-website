@@ -14,7 +14,8 @@
         </div>
         <div class="card-buttons">
           <slot name="button-1"></slot>
-          <base-button><slot name="button-2"></slot></base-button>
+
+          <slot name="button-2"></slot>
         </div>
       </div>
     </transition>
@@ -23,7 +24,9 @@
 
 <script>
 import { ref } from 'vue'
+import BaseButton from './BaseButton.vue'
 export default {
+  components: { BaseButton },
   setup() {
     const hoverProject = ref(false)
 

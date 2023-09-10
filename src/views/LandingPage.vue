@@ -8,9 +8,9 @@
         <h2>WEB DEVELOPER</h2>
       </div>
     </Transition>
-    <base-button @click="$emit('triggerAnimation')" class="btn"
-      ><router-link to="/contact">CONTACT ME</router-link>
-    </base-button>
+    <router-link to="/contact">
+      <base-button @click="$emit('triggerAnimation')" class="btn"> CONTACT ME </base-button>
+    </router-link>
   </section>
 </template>
 

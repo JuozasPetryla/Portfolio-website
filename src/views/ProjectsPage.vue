@@ -26,18 +26,16 @@
         <img src="../assets/sass.svg" class="skill-icon" />
         <img src="../assets/chartjs-logos.svg" class="skill-icon" />
       </template>
-      <template #button-1
-        ><base-button
-          ><a href="https://crypto-check-site.netlify.app" target="_blank"
-            >Visit site</a
-          ></base-button
-        ></template
-      >
-      <template #button-2
-        ><a href="https://github.com/JuozasPetryla/crypto-site" target="_blank"
-          >Project GitHub</a
-        ></template
-      >
+      <template #button-1>
+        <a href="https://crypto-check-site.netlify.app" target="_blank">
+          <base-button>Visit site</base-button>
+        </a>
+      </template>
+      <template #button-2>
+        <a href="https://github.com/JuozasPetryla/crypto-site" target="_blank"
+          ><base-button>Project GitHub</base-button></a
+        >
+      </template>
     </base-card>
     <base-card>
       <template #image>
@@ -56,15 +54,13 @@
         <img src="../assets/pocketbase-seeklogo.com.svg" class="skill-icon" />
       </template>
       <template #button-1
-        ><base-button
-          ><a href="https://contacts-system.netlify.app/" target="_blank"
-            >Visit site</a
-          ></base-button
+        ><a href="https://contacts-system.netlify.app/" target="_blank"
+          ><base-button>Visit site</base-button></a
         ></template
       >
       <template #button-2
         ><a href="https://github.com/JuozasPetryla/contacts-system" target="_blank"
-          >Project GitHub</a
+          ><base-button>Project GitHub</base-button></a
         ></template
       >
     </base-card>
@@ -88,16 +84,14 @@
         <img src="../assets/expressjs_logo_icon_169185.svg" class="skill-icon" />
         <img src="../assets/socket-io-icon.svg" class="skill-icon" />
       </template>
-      <template #button-1
-        ><base-button
-          ><a href="https://post-application-full.netlify.app" target="_blank"
-            >Visit site</a
-          ></base-button
-        ></template
-      >
+      <template #button-1>
+        <a href="https://post-application-full.netlify.app" target="_blank">
+          <base-button>Visit site</base-button>
+        </a>
+      </template>
       <template #button-2
         ><a href="https://github.com/JuozasPetryla/post-application-fullstack-full" target="_blank"
-          >Project GitHub</a
+          ><base-button>Project GitHub</base-button></a
         ></template
       >
     </base-card>
@@ -118,13 +112,13 @@
         <img src="../assets/logo-javascript.svg" class="skill-icon" />
       </template>
       <template #button-1
-        ><base-button
-          ><a href="https://powertower.netlify.app/" target="_blank">Visit site</a></base-button
-        ></template
-      >
+        ><a href="https://powertower.netlify.app/" target="_blank"
+          ><base-button>Visit site</base-button></a
+        >
+      </template>
       <template #button-2
         ><a href="https://github.com/JuozasPetryla/landing-page" target="_blank"
-          >Project GitHub</a
+          ><base-button>Project GitHub</base-button></a
         ></template
       >
     </base-card>
