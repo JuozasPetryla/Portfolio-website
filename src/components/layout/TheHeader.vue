@@ -130,7 +130,7 @@ header {
   width: 100vw;
   height: 100vh;
   transform-origin: top;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .nav-mobile::before {
@@ -173,13 +173,13 @@ header {
 
 @keyframes enterNav {
   0% {
-    z-index: 999;
+    z-index: 1000;
     transform: translateY(-100%);
   }
 
   100% {
     transform: translateY(0);
-    z-index: 999;
+    z-index: 1000;
   }
 }
 

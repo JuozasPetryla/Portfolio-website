@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="{ 'fixed-pos': positionFixed }">
+  <div id="app">
     <the-header @triggerAnimation="onTriggerAnimation"></the-header>
     <transition name="route">
       <div class="transition-rect" v-if="page"></div>
@@ -10,7 +10,9 @@
       </div>
     </transition>
     <div :class="{ 'disable-scroll': positionFixed || loaded }">
-      <router-view @triggerAnimation="onTriggerAnimation"></router-view>
+      <div class="relative-container">
+        <router-view @triggerAnimation="onTriggerAnimation"></router-view>
+      </div>
     </div>
     <the-footer :class="{ hidden: page }"></the-footer>
   </div>
@@ -69,15 +71,12 @@ export default {
 </script>
 
 <style scoped>
-#app {
-  overflow: hidden;
-}
-
 .hidden {
   opacity: 0;
 }
 .disable-scroll {
-  max-height: 84vh;
+  position: fixed;
+  max-height: 100vh;
   width: 100vw;
 }
 
@@ -141,18 +140,9 @@ export default {
   }
 }
 
-@media (max-width: 768px) {
-  .disable-scroll {
-    max-height: 59vh;
-  }
-}
-
 @media (max-width: 660px) {
   .transition-rect {
     top: 4.8rem;
-  }
-  .disable-scroll {
-    max-height: 76vh;
   }
   @keyframes enterPage {
     0% {
@@ -176,9 +166,7 @@ export default {
   .transition-rect {
     top: 3.6rem;
   }
-  .disable-scroll {
-    max-height: 81vh;
-  }
+
   @keyframes enterPage {
     0% {
       top: 100%;
@@ -194,12 +182,6 @@ export default {
       bottom: 100%;
       top: 3.6rem;
     }
-  }
-}
-
-@media (max-width: 350px) {
-  .disable-scroll {
-    max-height: 85vh;
   }
 }
 </style>
