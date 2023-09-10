@@ -77,7 +77,7 @@ export default {
   opacity: 0;
 }
 .disable-scroll {
-  max-height: 80.25vh;
+  max-height: 80vh;
   width: 100vw;
 }
 
