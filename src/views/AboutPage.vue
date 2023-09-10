@@ -14,7 +14,7 @@
       <p>
         I am a Web Developer and a first year software engineering student in Kaunas University of
         Technology. I fell in love with programming before my first year of university. Since then,
-        I have been perpetualy challenging myself with side projects, learning new technologies and
+        I have been perpetually challenging myself with side projects, learning new technologies and
         programming languages, because I just enjoy the feeling of self-improvement.
       </p>
     </div>
