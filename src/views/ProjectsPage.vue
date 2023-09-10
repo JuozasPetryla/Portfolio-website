@@ -9,6 +9,40 @@
       <template #image>
         <img
           class="power-tower"
+          src="../assets/crypto-app.webp"
+          alt="Image of the contacts system app"
+        />
+      </template>
+      <template #content>
+        <p>
+          A fullstack app displaying cryptocurrency graphs and info in realtime. Full description on
+          GitHub.
+        </p>
+      </template>
+      <template #logos>
+        <img src="../assets/react-js-icon.svg" class="skill-icon" />
+        <img src="../assets/expressjs_logo_icon_169185.svg" class="skill-icon" />
+        <img src="../assets/bootstrap.svg" class="skill-icon" />
+        <img src="../assets/sass.svg" class="skill-icon" />
+        <img src="../assets/chartjs-logos.svg" class="skill-icon" />
+      </template>
+      <template #button-1
+        ><base-button
+          ><a href="https://crypto-check-site.netlify.app" target="_blank"
+            >Visit site</a
+          ></base-button
+        ></template
+      >
+      <template #button-2
+        ><a href="https://github.com/JuozasPetryla/crypto-site" target="_blank"
+          >Project GitHub</a
+        ></template
+      >
+    </base-card>
+    <base-card>
+      <template #image>
+        <img
+          class="power-tower"
           src="../assets/contactsystem.webp"
           alt="Image of the contacts system app"
         />
@@ -20,7 +54,6 @@
         <img src="../assets/vue-9.svg" class="skill-icon" />
         <img src="../assets/file_type_tailwind_icon_130128.svg" class="skill-icon" />
         <img src="../assets/pocketbase-seeklogo.com.svg" class="skill-icon" />
-        <img src="../assets/vite-svgrepo-com.svg" class="skill-icon" />
       </template>
       <template #button-1
         ><base-button
@@ -54,11 +87,10 @@
         <img src="../assets/css-3.svg" class="skill-icon" />
         <img src="../assets/expressjs_logo_icon_169185.svg" class="skill-icon" />
         <img src="../assets/socket-io-icon.svg" class="skill-icon" />
-        <img src="../assets/vite-svgrepo-com.svg" class="skill-icon" />
       </template>
       <template #button-1
         ><base-button
-          ><a href="https://post-application-full.netlify.app/" target="_blank"
+          ><a href="https://post-application-full.netlify.app" target="_blank"
             >Visit site</a
           ></base-button
         ></template

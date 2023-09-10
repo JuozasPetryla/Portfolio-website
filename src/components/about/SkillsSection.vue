@@ -21,12 +21,20 @@
           <img src="../../assets/vue-9.svg" class="skill-icon" />
         </skill-icons>
         <skill-icons>
+          <template #logo><p>React</p></template>
+          <img src="../../assets/react-js-icon.svg" class="skill-icon" />
+        </skill-icons>
+        <skill-icons>
           <template #logo><p>Tailwind</p></template>
           <img src="../../assets/file_type_tailwind_icon_130128.svg" class="skill-icon" />
         </skill-icons>
         <skill-icons>
-          <template #logo><p>React</p></template>
-          <img src="../../assets/react-js-icon.svg" class="skill-icon" />
+          <template #logo><p>Bootstrap</p></template>
+          <img src="../../assets/bootstrap.svg" class="skill-icon" />
+        </skill-icons>
+        <skill-icons>
+          <template #logo><p>SASS</p></template>
+          <img src="../../assets/sass.svg" class="skill-icon" />
         </skill-icons>
       </div>
       <div class="backend">
@@ -163,6 +171,7 @@ h4 {
   column-gap: 8em;
   height: 27.5rem;
   place-items: center;
+  align-items: start;
 }
 .skill-icon {
   width: 10.4em;
