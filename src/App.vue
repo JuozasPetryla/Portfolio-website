@@ -9,7 +9,7 @@
         <loading-screen></loading-screen>
       </div>
     </transition>
-    <div :class="{ 'disable-scroll': positionFixed }">
+    <div :class="{ 'disable-scroll': positionFixed || loaded }">
       <router-view @triggerAnimation="onTriggerAnimation"></router-view>
     </div>
     <the-footer :class="{ hidden: page }"></the-footer>
@@ -39,7 +39,7 @@ export default {
       setTimeout(() => {
         positionFixed.value = false
         loaded.value = false
-      }, 4000)
+      }, 6000)
     }
 
     const onTriggerAnimation = function () {
@@ -77,7 +77,7 @@ export default {
   opacity: 0;
 }
 .disable-scroll {
-  max-height: 80vh;
+  max-height: 84vh;
   width: 100vw;
 }
 
