@@ -199,7 +199,8 @@ export default {
 @media (max-width: 1550px) {
   .projects-section {
     grid-template-columns: 1fr;
-    row-gap: 4.4rem;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+    row-gap: 4.2rem;
   }
 }
 
