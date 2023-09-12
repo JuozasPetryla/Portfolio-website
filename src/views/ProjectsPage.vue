@@ -46,7 +46,10 @@
         />
       </template>
       <template #content>
-        <p>A complicated contacts management system for Teltonika. Full description on GitHub.</p>
+        <p>
+          A complicated contacts management system for Teltonika. Login for testing -> mail:
+          admin@gmail.com; password: adminadmin.
+        </p>
       </template>
       <template #logos>
         <img src="../assets/vue-9.svg" class="skill-icon" />
