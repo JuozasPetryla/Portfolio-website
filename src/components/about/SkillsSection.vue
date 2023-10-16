@@ -74,6 +74,10 @@
           <img src="../../assets/logo-javascript.svg" class="skill-icon" />
         </skill-icons>
         <skill-icons>
+          <template #logo><p>TypeScript</p></template>
+          <img src="../../assets/typescript-svgrepo-com.svg" class="skill-icon" />
+        </skill-icons>
+        <skill-icons>
           <template #logo><p>C#</p></template>
           <img src="../../assets/c--4.svg" class="skill-icon" />
         </skill-icons>
@@ -171,7 +175,7 @@ export default {
 }
 
 .languages {
-  grid-template-columns: 12rem 12rem 12rem 12rem;
+  grid-template-columns: 12rem 12rem 12rem 12rem 12rem;
   grid-column: 1/-1;
 }
 
@@ -244,7 +248,7 @@ h4 {
     font-size: 4.8rem;
   }
   .languages {
-    grid-template-columns: 10rem 10rem 10rem 10rem;
+    grid-template-columns: 10rem 10rem 10rem 10rem 10rem;
   }
 
   .skill-icon {
@@ -285,7 +289,7 @@ h4 {
     font-size: 4rem;
   }
   .languages {
-    grid-template-columns: 8rem 8rem 8rem 8rem;
+    grid-template-columns: 8rem 8rem 8rem 8rem 8rem;
   }
   .skill-icon {
     width: 4.8em;
@@ -321,7 +325,7 @@ h4 {
     width: 55rem;
   }
   .languages {
-    grid-template-columns: 6rem 6rem 6rem 6rem;
+    grid-template-columns: 6rem 6rem 6rem 6rem 6rem;
   }
   h4 {
     font-size: 3rem;
@@ -372,7 +376,7 @@ h4 {
     font-size: 2rem;
   }
   .languages {
-    grid-template-columns: 4rem 4rem 4rem 4rem;
+    grid-template-columns: 4rem 4rem 4rem 4rem 4rem;
   }
   .skill-icon {
     width: 3.2em;
@@ -463,7 +467,7 @@ h4 {
     font-size: 1.2rem;
   }
   .languages {
-    grid-template-columns: 2.4rem 2.4rem 2.4rem 2.4rem;
+    grid-template-columns: 2.4rem 2.4rem 2.4rem 2.4rem 2.4rem;
   }
   .skill-icon {
     width: 2.4em;
