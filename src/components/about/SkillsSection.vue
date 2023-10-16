@@ -13,10 +13,6 @@
           <img src="../../assets/css-3.svg" class="skill-icon" />
         </skill-icons>
         <skill-icons>
-          <template #logo><p>JavaScript</p></template>
-          <img src="../../assets/logo-javascript.svg" class="skill-icon" />
-        </skill-icons>
-        <skill-icons>
           <template #logo><p>Vue</p></template>
           <img src="../../assets/vue-9.svg" class="skill-icon" />
         </skill-icons>
@@ -44,12 +40,16 @@
           <img src="../../assets/expressjs_logo_icon_169185.svg" class="skill-icon" />
         </skill-icons>
         <skill-icons>
-          <template #logo><p>Socket.io</p></template>
-          <img src="../../assets/socket-io-icon.svg" class="skill-icon socket" />
+          <template #logo><p>Spring</p></template>
+          <img src="../../assets/spring-svgrepo-com.svg" class="skill-icon socket" />
         </skill-icons>
         <skill-icons>
           <template #logo><p>SQL</p></template>
           <img src="../../assets/sql-database-generic-svgrepo-com.svg" class="skill-icon" />
+        </skill-icons>
+        <skill-icons>
+          <template #logo><p>Postman</p></template>
+          <img src="../../assets/postman-icon-svgrepo-com.svg" class="skill-icon" />
         </skill-icons>
       </div>
       <div class="other">
@@ -59,16 +59,31 @@
           <img src="../../assets/git-icon.svg" class="skill-icon" />
         </skill-icons>
         <skill-icons>
-          <template #logo><p>Gitlab</p></template>
-          <img src="../../assets/gitlab-seeklogo.com.svg" class="skill-icon" />
+          <template #logo><p>Docker</p></template>
+          <img src="../../assets/docker-svgrepo-com.svg" class="skill-icon" />
         </skill-icons>
         <skill-icons>
-          <template #logo><p>Github</p></template>
-          <img src="../../assets/github.svg" class="skill-icon" />
+          <template #logo><p>AGILE</p></template>
+          <img src="../../assets/agile-svgrepo-com.svg" class="skill-icon" />
+        </skill-icons>
+      </div>
+      <div class="languages">
+        <h4>Languages</h4>
+        <skill-icons>
+          <template #logo><p>JavaScript</p></template>
+          <img src="../../assets/logo-javascript.svg" class="skill-icon" />
         </skill-icons>
         <skill-icons>
-          <template #logo><p>Postman</p></template>
-          <img src="../../assets/postman-icon-svgrepo-com.svg" class="skill-icon" />
+          <template #logo><p>C#</p></template>
+          <img src="../../assets/c--4.svg" class="skill-icon" />
+        </skill-icons>
+        <skill-icons>
+          <template #logo><p>Lua</p></template>
+          <img src="../../assets/lua-svgrepo-com.svg" class="skill-icon" />
+        </skill-icons>
+        <skill-icons>
+          <template #logo><p>Java</p></template>
+          <img src="../../assets/java-svgrepo-com.svg" class="skill-icon" />
         </skill-icons>
       </div>
     </div>
@@ -105,7 +120,7 @@ export default {
 <style scoped>
 .skills-section {
   display: grid;
-  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 0.5fr;
   justify-items: center;
 }
 .socket {
@@ -132,7 +147,8 @@ export default {
 
 .backend,
 .other,
-.frontend {
+.frontend,
+.languages {
   display: grid;
   place-items: center;
   row-gap: 5.6rem;
@@ -154,6 +170,11 @@ export default {
   grid-template-columns: 14rem 14rem;
 }
 
+.languages {
+  grid-template-columns: 12rem 12rem 12rem 12rem;
+  grid-column: 1/-1;
+}
+
 h4 {
   font-size: 6.4rem;
   color: #dee2e6;
@@ -168,6 +189,7 @@ h4 {
 .skill-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   column-gap: 8em;
   height: 27.5rem;
   place-items: center;
@@ -221,6 +243,9 @@ h4 {
   h4 {
     font-size: 4.8rem;
   }
+  .languages {
+    grid-template-columns: 10rem 10rem 10rem 10rem;
+  }
 
   .skill-icon {
     width: 6.4em;
@@ -259,6 +284,9 @@ h4 {
   h4 {
     font-size: 4rem;
   }
+  .languages {
+    grid-template-columns: 8rem 8rem 8rem 8rem;
+  }
   .skill-icon {
     width: 4.8em;
     height: 4.8em;
@@ -291,6 +319,9 @@ h4 {
   .skills-section h3 {
     font-size: 4.8rem;
     width: 55rem;
+  }
+  .languages {
+    grid-template-columns: 6rem 6rem 6rem 6rem;
   }
   h4 {
     font-size: 3rem;
@@ -339,6 +370,9 @@ h4 {
     text-shadow: 2.5px 2.5px #52b788;
 
     font-size: 2rem;
+  }
+  .languages {
+    grid-template-columns: 4rem 4rem 4rem 4rem;
   }
   .skill-icon {
     width: 3.2em;
@@ -427,6 +461,9 @@ h4 {
     text-shadow: 1px 1px #52b788;
 
     font-size: 1.2rem;
+  }
+  .languages {
+    grid-template-columns: 2.4rem 2.4rem 2.4rem 2.4rem;
   }
   .skill-icon {
     width: 2.4em;

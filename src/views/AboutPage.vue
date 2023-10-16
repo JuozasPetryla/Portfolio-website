@@ -51,7 +51,7 @@ export default {
   display: grid;
   justify-items: center;
   justify-content: center;
-  grid-template-rows: 1fr 0.5fr 2fr;
+  grid-template-rows: 1fr 0.5fr 3.5fr;
   gap: 9.6rem;
   overflow: hidden;
   position: relative;
@@ -132,7 +132,7 @@ export default {
 
 @media (max-width: 1220px) {
   .about-section {
-    grid-template-rows: 1fr 0.5fr 1.5fr;
+    grid-template-rows: 1fr 0.5fr 3fr;
   }
 }
 @media (max-width: 1140px) {
@@ -149,7 +149,7 @@ export default {
     height: auto;
   }
   .about-section {
-    grid-template-rows: 1fr 0.5fr 1.5fr;
+    grid-template-rows: 1fr 0.5fr 2.5fr;
   }
 }
 
@@ -180,7 +180,7 @@ export default {
     height: auto;
   }
   .about-section {
-    grid-template-rows: 1fr 0.5fr 1.5fr;
+    grid-template-rows: 1fr 0.5fr 3fr;
   }
 }
 
@@ -192,7 +192,7 @@ export default {
     width: 80%;
   }
   .about-section {
-    grid-template-rows: 0.75fr 0.5fr 1.25fr;
+    grid-template-rows: 0.75fr 0.5fr 3fr;
 
     gap: 3rem;
   }
@@ -221,9 +221,19 @@ export default {
     flex-direction: column-reverse;
     gap: 3.2rem;
   }
+  .about-section {
+    grid-template-rows: 0.75fr 0.5fr 2fr;
+
+    gap: 3rem;
+  }
 }
 
 @media (max-width: 580px) {
+  .about-section {
+    grid-template-rows: 0.75fr 0.5fr 2.5fr;
+
+    gap: 3rem;
+  }
   .about-text-container p {
     font-size: 2rem;
   }
@@ -302,6 +312,11 @@ export default {
   .image {
     width: 100%;
     height: auto;
+  }
+  .about-section {
+    grid-template-rows: 0.75fr 0.5fr 2.5fr;
+
+    gap: 3rem;
   }
 }
 </style>
