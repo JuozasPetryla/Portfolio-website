@@ -5,6 +5,11 @@
       <div class="rectangle" v-if="show"></div>
       <h2>Projects</h2>
     </div>
+    <h4>
+      Disclaimer: most of the projects' backend servers are hosted <br />
+      via 3rd party services, so it might take a while <br />
+      for the websites to load all the data
+    </h4>
     <base-card>
       <template #image>
         <img
@@ -148,7 +153,7 @@ export default {
   display: grid;
   justify-items: center;
   justify-content: center;
-  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-rows: 1fr 0.5fr 2fr 2fr;
   grid-template-columns: 1fr 1fr;
   padding-bottom: 9.6rem;
   row-gap: 9.6rem;
@@ -160,6 +165,11 @@ export default {
   grid-column: 1/-1;
 }
 
+h4 {
+  grid-column: 1/-1;
+  font-size: 2rem;
+  text-align: center;
+}
 .rectangle {
   background: #333533;
   position: absolute;
@@ -202,7 +212,7 @@ export default {
 @media (max-width: 1550px) {
   .projects-section {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr 0.5fr 2fr 2fr 2fr 2fr;
     row-gap: 4.2rem;
   }
 }
@@ -247,6 +257,9 @@ export default {
 @media (max-width: 480px) {
   .projects-title-container h2 {
     font-size: 4.8rem;
+  }
+  h4 {
+    font-size: 1.2rem;
   }
 
   .projects-section {
